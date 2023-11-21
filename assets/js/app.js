@@ -12,7 +12,7 @@ function init() {
   canvas.height = HEIGHT;
 
   if(!running){ 
-    generateParticles(100);
+    generateParticles(Math.floor(WIDTH * HEIGHT / 4000));
     particlesLength = particles.length;
     animate(); 
     running = true; }
