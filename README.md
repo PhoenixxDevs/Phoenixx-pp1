@@ -4,3 +4,6 @@ The Phoenixx Music website is aimed towards building and establishing a fan base
 
 ## User Stories
 
+## Resources
+
+Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
