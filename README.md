@@ -42,7 +42,20 @@ After recording his first EP and performing at multiple events, the artist needs
 |2.|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section.| <br>
 ---
 # Design
-### Colour Palette
+## Wireframes
+### Home
+![Home wireframe](docs/wireframes/home-wireframe.jpg)
+### Events
+![Events wireframe](docs/wireframes/events-wireframe.jpg)
+### Gallery
+![Gallery wireframe](docs/wireframes/gallery-wireframe.jpg)
+### About
+![About wireframe](docs/wireframes/about-wireframe.jpg)
+### Connect
+![Connect wireframe](docs/wireframes/connect-wireframe.jpg)
+## Colour Palette
+![Colour Palette](./docs/colorpalette.png)
+
 French Violet (Bold Dark Purple) - rgb(140, 0, 204)
 
 Teldrassil Purple (Medium Pastel Purple) - rgb(167, 95, 214)
@@ -53,15 +66,16 @@ Mt Burleigh (Dark Off Green) - rgb(92, 122, 105)
 
 Citrino (Subtle Cream Highlighter) - rgb(234, 226, 158)
 
-
+---
 # Resources
-
 ## Images
-
 Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
-
 ## Utilities
 |Used For|Link|
 |--|--|
 |Markdown Editor|https://stackedit.io/app#|
 |Colour Palette Design|https://color.adobe.com/My-Color-Theme-color-theme-889ac981-1580-4518-8afb-66671f0c0db8|
+|Choosing colours|https://careerfoundry.com/en/blog/ui-design/introduction-to-color-theory-and-color-palettes/|
+|Gradient Text|https://cssgradient.io/blog/css-gradient-text/|
+|[About Section](#about) Container Horizontal Scrolling|https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/|
+|[About Section](#about) Container Scroll Snapping|https://alvarotrigo.com/blog/css-snap-scroll-horizontally/|

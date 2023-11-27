@@ -1,3 +1,5 @@
+/************************* GENERAL *************************/
+
 * {
   padding: 0;
   margin: 0;
@@ -16,12 +18,37 @@ canvas {
   left: 0;
 }
 
+/************************* COLOURS *************************/
+
+:root {
+  --color--purple-bold: rgb(140, 0, 204);
+  --color--purple-light: rgb(167, 95, 214);
+  --color--purple-dark: rgb(97, 75, 113);
+  --color--green: rgb(92, 122, 105);
+  --color--yellow: rgb(234, 226, 158);
+}
+
+/************************* IMAGES *************************/
+
 #sitback {
   max-width: 18%;
   max-height: 20%;
   position: absolute;
   bottom: 0;
   left: -2%;
+}
+
+/************************* HEADINGS AND NAV *************************/
+
+h1{
+  background:linear-gradient(324deg,var(--color--purple-bold) 0, var(--color--purple-light)90%,var(--color--yellow) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
 }
 
 /************************* ANIMATIONS *************************/
