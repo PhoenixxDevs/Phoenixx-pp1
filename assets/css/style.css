@@ -36,14 +36,6 @@ section {
   height: 100vh;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
-}
-
 /************************* COLOURS *************************/
 
 :root {
@@ -57,7 +49,7 @@ footer {
 /************************* IMAGES *************************/
 
 #sitback {
-  max-height: 115%;
+  max-height: 70%;
   min-height: 10%;
   width: auto;
   position: absolute;
@@ -70,7 +62,7 @@ footer {
 .title-main {
   display: block;
   width: 100vw;
-
+  user-select: none;
 }
 
 .title-main h1 {
@@ -94,10 +86,53 @@ footer {
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.78);
 }
 
+/************************* HOME SECTION *************************/
+.container-ep-art {
+  border: 1px solid #fff;
+  /* padding-top: 61vh; */
+}
+.container-ep-art img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:30%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(244,243,242,0.8);
+}
+
 /************************* FOOTER *************************/
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
+.copyright-info {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 160px;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.451);
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(223, 222, 221, 0.524);
+  color: #3b3b3b;
+}
 
+.links-social {
+  text-align: center;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  list-style-type: none;
+  float: right;
+  font-size: 34px;
+  color: var(--color--purple-bold);
+}
 
 /************************* ANIMATIONS *************************/
 
