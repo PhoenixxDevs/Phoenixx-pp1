@@ -22,26 +22,29 @@
     <script type="text/javascript" src="assets/js/app.js" defer></script>
   </head>
   <body>
-    <section class="home fade-in">
-      <header>
-        <div class="title-main">
-          <h1>Phoenixx</h1>
-        </div>
-        <div class="nav-container">
-          <ul class="nav">
-            <il class="nav-element">Events</il>
-            <il class="nav-element">About</il>
-            <il class="nav-element">Connect</il>
-            <il class="nav-element">Gallery</il>
-          </ul>
-        </div>
-      </header>
-        <div class="container-ep-art">
-          <img
-            src="assets/img/phoenixx-self-titled.png"
-            alt="Album Artwork for Self Titled by Phoenixx"
-          />
-        </div>
+    <header>
+      <div class="title-main fade-in">
+        <h1>Phoenixx</h1>
+      </div>
+      <div class="nav-container">
+        <ul class="nav">
+          <il class="nav-element" onclick="hide('home')">Events</il>
+          <il class="nav-element">About</il>
+          <il class="nav-element">Connect</il>
+          <il class="nav-element">Gallery</il>
+        </ul>
+      </div>
+    </header>
+    <section class="home fade-in" id="home-section">
+      <div class="container-ep-art">
+        <img
+          src="assets/img/phoenixx-self-titled.png"
+          alt="Album Artwork for Self Titled by Phoenixx"
+        />
+      </div>
+    </section>
+    <section class="events">
+
     </section>
     <footer>
       <img
@@ -53,15 +56,49 @@
         Copyright &#169; <br />
         Phoenixx 2023
       </div>
-      <div class="links-social fade-in">
+      <div class="links-social fade-in" id="links-social">
         <ul>
-          <li class="spotify point-at"><i class="fa-brands fa-spotify"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-youtube"></i></li>
+          <li class="spotify point-at">
+            <a href="https://www.spotify.com" target="_blank" aria-label="Link to Spotify. Opens in a new tab.">
+              <i class="fa-brands fa-spotify"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram. Opens in a new tab.">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook. Opens in a new tab.">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com" target="_blank" aria-label="Link to YouTube. Opens in a new tab.">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
     <canvas id="canvas"></canvas>
+    <script>
+      const homeSection = document.getElementById('home-section');
+      const linksSocial = document.getElementById('links-social');
+      const socialElements = linksSocial.children[0].children;
+
+      function hide(section) {
+        switch(section){
+          case 'home':
+          homeSection.classList.add('hidden');
+          if(window.innerWidth < 750){
+            for(let i = 0; i < socialElements.length; i++) {
+              socialElements[i].classList.add('hidden');
+            }
+          }
+          break;
+        }
+      }
+    </script>
   </body>
 </html>
