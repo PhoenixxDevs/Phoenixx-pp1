@@ -12,7 +12,7 @@ body {
 }
 
 canvas {
-  z-index: -1;
+  z-index: -100;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,6 +48,7 @@ section {
 /************************* HEADER AND NAV *************************/
 
 .title-main {
+  z-index: 100;
   display: block;
   /* width: 100vw; */
   user-select: none;
@@ -55,8 +56,8 @@ section {
 
 .title-main h1 {
   width: 300px;
-  margin: 8vh auto;
-  margin-bottom: 2vh;
+  margin: 4vh auto;
+  /* margin-bottom: 2vh; */
   text-align: center;
   top: 12%;
   font-size: 80px;
@@ -74,11 +75,12 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.78);
+  transition: all 1s ease;
 }
 
 .nav-container {
   text-align: center;
-  font-family: 'Glory', sans-serif;
+  font-family: "Glory", sans-serif;
   /* font-family: "Inter Tight", sans-serif; */
   font-weight: 600;
   font-size: 35px;
@@ -97,10 +99,34 @@ section {
     -1px 0 2px rgba(234, 226, 158, 0.569), 0 1px 2px rgba(234, 226, 158, 0.569),
     0 -1px 2px rgba(234, 226, 158, 0.569);
   box-shadow: 0 0 17px rgba(97, 75, 113, 0.569);
-}
-.nav li {
-  cursor: pointer;
   user-select: none;
+}
+.nav-element {
+  z-index: 2;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.nav-element:hover {
+  color: var(--color--yellow);
+  text-shadow: 3px 0 6px rgba(234, 226, 158, 0.569),
+    -3px 0 6px rgba(234, 226, 158, 0.569), 0 3px 6px rgba(234, 226, 158, 0.569),
+    0 -3px 6px rgba(234, 226, 158, 0.569);
+    transform: scale(1.1);
+}
+.nav-element:active{
+  transition: all 0.1s;
+  color: var(--color--purple-dark);
+}
+.nav-responsive {
+  z-index: 1;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  border: 1px solid white;
 }
 
 /************************* HOME SECTION *************************/
@@ -174,11 +200,11 @@ footer {
 .point-at::after {
   position: absolute;
   right: 11px;
-  bottom: 145px;
+  bottom: 142px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f107";
-  color: var(--color--yellow); 
+  color: var(--color--yellow);
   animation: pointAnimation ease 10s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;

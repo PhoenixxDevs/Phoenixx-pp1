@@ -23,15 +23,15 @@
   </head>
   <body>
     <header>
-      <div class="title-main fade-in">
+      <div class="title-main fade-in" id="title">
         <h1>Phoenixx</h1>
       </div>
-      <div class="nav-container">
+      <div class="nav-container" id="nav-container">
         <ul class="nav">
-          <il class="nav-element" onclick="hide('home')">Events</il>
-          <il class="nav-element">About</il>
-          <il class="nav-element">Connect</il>
-          <il class="nav-element">Gallery</il>
+          <il class="nav-element" onclick="handleSectionChange('events')">Events</il>
+          <il class="nav-element" onclick="handleSectionChange('about')">About</il>
+          <il class="nav-element" onclick="handleSectionChange('connect')">Connect</il>
+          <il class="nav-element" onclick="handleSectionChange('gallery')">Gallery</il>
         </ul>
       </div>
     </header>
@@ -43,9 +43,7 @@
         />
       </div>
     </section>
-    <section class="events">
-
-    </section>
+    <section class="events"></section>
     <footer>
       <img
         id="sitback"
@@ -59,22 +57,38 @@
       <div class="links-social fade-in" id="links-social">
         <ul>
           <li class="spotify point-at">
-            <a href="https://www.spotify.com" target="_blank" aria-label="Link to Spotify. Opens in a new tab.">
+            <a
+              href="https://www.spotify.com"
+              target="_blank"
+              aria-label="Link to Spotify. Opens in a new tab."
+            >
               <i class="fa-brands fa-spotify"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram. Opens in a new tab.">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Link to Instagram. Opens in a new tab."
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook. Opens in a new tab.">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Link to Facebook. Opens in a new tab."
+            >
               <i class="fa-brands fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com" target="_blank" aria-label="Link to YouTube. Opens in a new tab.">
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              aria-label="Link to YouTube. Opens in a new tab."
+            >
               <i class="fa-brands fa-youtube"></i>
             </a>
           </li>
@@ -83,20 +97,68 @@
     </footer>
     <canvas id="canvas"></canvas>
     <script>
-      const homeSection = document.getElementById('home-section');
-      const linksSocial = document.getElementById('links-social');
+      const homeSection = document.getElementById("home-section");
+      const title = document.getElementById("title");
+      const navContainer = document.getElementById("nav-container");
+      const navChildren = navContainer.children[0].children;
+      const eventsNav = navChildren[0];
+      const aboutNav = navChildren[1];
+      const connectNav = navChildren[2];
+      const galleryNav = navChildren[3];
+      const linksSocial = document.getElementById("links-social");
       const socialElements = linksSocial.children[0].children;
 
-      function hide(section) {
-        switch(section){
-          case 'home':
-          homeSection.classList.add('hidden');
-          if(window.innerWidth < 750){
-            for(let i = 0; i < socialElements.length; i++) {
-              socialElements[i].classList.add('hidden');
-            }
-          }
+      function hideSocials() {
+        // Cycle through all elements in social link list and set display none
+        for (let i = 0; i < socialElements.length; i++) {
+          toggleElementClass(socialElements[i], "hidden", 0);
+        }
+      }
+
+      function setActiveSection(section) {
+        // Turns off active class on all sections apart from current
+        for (let i = 0; i < navChildren.length; i++) {
+          toggleElementClass(navChildren[i], "active", 0);
+        }
+        switch (section) {
+          case "events":
+          eventsNav.classList.add("active");
           break;
+          case "about":
+          aboutNav.classList.add("active");
+          break;
+          case "connect":
+          connectNav.classList.add("active");
+          break;
+          case "gallery":
+          galleryNav.classList.add("active");
+            break;
+          case "home":
+        }
+      }
+
+      function toggleElementClass(element, className, state) {
+        state ? element.classList.add(className) : element.classList.remove(className);
+      }
+
+      function handleSectionChange(section) {
+        switch (section) {
+          case "events":
+            // setActiveSection(events)
+            case "about":
+            
+            case "connect":
+            toggleElementClass(homeSection, "hidden", 1);
+            if (window.innerWidth < 1024) {
+              // If tablet or below make burger menu
+              toggleElementClass(navContainer, "nav-responsive", 1);
+              toggleElementClass(navContainer, "hidden", 1);
+
+              if (window.innerWidth < 768) {
+                hideSocials();
+              }
+            }
+            break;
         }
       }
     </script>
