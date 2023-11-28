@@ -28,10 +28,30 @@
       </div>
       <div class="nav-container" id="nav-container">
         <ul class="nav">
-          <il class="nav-element" onclick="handleSectionChange('events')">Events</il>
-          <il class="nav-element" onclick="handleSectionChange('about')">About</il>
-          <il class="nav-element" onclick="handleSectionChange('connect')">Connect</il>
-          <il class="nav-element" onclick="handleSectionChange('gallery')">Gallery</il>
+          <il
+            class="nav-element"
+            onclick="handleSectionChange('events')"
+            id="events"
+            >Events</il
+          >
+          <il
+            class="nav-element"
+            onclick="handleSectionChange('about')"
+            id="about"
+            >About</il
+          >
+          <il
+            class="nav-element"
+            onclick="handleSectionChange('connect')"
+            id="connect"
+            >Connect</il
+          >
+          <il
+            class="nav-element"
+            onclick="handleSectionChange('gallery')"
+            id="gallery"
+            >Gallery</il
+          >
         </ul>
       </div>
     </header>
@@ -100,64 +120,98 @@
       const homeSection = document.getElementById("home-section");
       const title = document.getElementById("title");
       const navContainer = document.getElementById("nav-container");
+      const linksSocial = document.getElementById("links-social");
       const navChildren = navContainer.children[0].children;
       const eventsNav = navChildren[0];
       const aboutNav = navChildren[1];
       const connectNav = navChildren[2];
       const galleryNav = navChildren[3];
-      const linksSocial = document.getElementById("links-social");
       const socialElements = linksSocial.children[0].children;
+
+      const customClasses = {
+        hidden: "hidden",
+        active: "active",
+        navResponsive: "nav-responsive",
+        titleResponsive: "title-responsive",
+      };
 
       function hideSocials() {
         // Cycle through all elements in social link list and set display none
         for (let i = 0; i < socialElements.length; i++) {
-          toggleElementClass(socialElements[i], "hidden", 0);
+          toggleElementClass(socialElements[i], customClasses.hidden, 1);
+        }
+      }
+
+      function toggleElementClass(element, className, state) {
+        state
+          ? element.classList.add(className)
+          : element.classList.remove(className);
+      }
+
+      function pageReformat(section) {
+        toggleElementClass(homeSection, customClasses.hidden, 1);
+        toggleElementClass(title, customClasses.titleResponsive, 1);
+        if (window.innerWidth < 1024) {
+          // If tablet or below make burger menu
+          toggleElementClass(navContainer, customClasses.navResponsive, 1);
+          if (window.innerWidth < 768) {
+            hideSocials();
+            section === "gallery"
+              ? (socialElements[1].style.display = "block")
+              : (socialElements[1].style.display = "none");
+          }
         }
       }
 
       function setActiveSection(section) {
         // Turns off active class on all sections apart from current
         for (let i = 0; i < navChildren.length; i++) {
-          toggleElementClass(navChildren[i], "active", 0);
+          toggleElementClass(navChildren[i], customClasses.active, 0);
+          if (section === navChildren[i].id) {
+            continue;
+          } else {
+            toggleElementClass(navChildren[i], customClasses.hidden, 1);
+          }
         }
         switch (section) {
           case "events":
-          eventsNav.classList.add("active");
-          break;
+            toggleElementClass(eventsNav, customClasses.active, 1);
+            break;
           case "about":
-          aboutNav.classList.add("active");
-          break;
+            toggleElementClass(aboutNav, customClasses.active, 1);
+            break;
           case "connect":
-          connectNav.classList.add("active");
-          break;
+            toggleElementClass(connectNav, customClasses.active, 1);
+            break;
           case "gallery":
-          galleryNav.classList.add("active");
+            toggleElementClass(galleryNav, customClasses.active, 1);
             break;
           case "home":
+            break;
         }
-      }
-
-      function toggleElementClass(element, className, state) {
-        state ? element.classList.add(className) : element.classList.remove(className);
       }
 
       function handleSectionChange(section) {
         switch (section) {
           case "events":
-            // setActiveSection(events)
+            pageReformat(section);
+            setActiveSection("events");
+            break;
             case "about":
-            
+            pageReformat(section);
+            setActiveSection("about");
+            break;
             case "connect":
-            toggleElementClass(homeSection, "hidden", 1);
-            if (window.innerWidth < 1024) {
-              // If tablet or below make burger menu
-              toggleElementClass(navContainer, "nav-responsive", 1);
-              toggleElementClass(navContainer, "hidden", 1);
-
-              if (window.innerWidth < 768) {
-                hideSocials();
-              }
-            }
+            pageReformat(section);
+            setActiveSection("connect");
+            break;
+            case "gallery":
+            pageReformat(section);
+            setActiveSection("gallery");
+            break;
+            case "home":
+            pageReformat(section);
+            setActiveSection("home");
             break;
         }
       }
