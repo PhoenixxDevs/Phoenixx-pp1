@@ -21,39 +21,47 @@
     <!-- Script -> Particles -->
     <script type="text/javascript" src="assets/js/app.js" defer></script>
   </head>
-  <body class="fade-in">
-    <header>
-      <div class="title-main">
-        <h1>Phoenixx</h1>
-      </div>
-      <div class="nav-container">
-        <ul class="nav">
-          <il class="nav-element">Events</il>
-          <il class="nav-element">Gallery</il>
-          <br />
-          <il class="nav-element">About</il>
-          <il class="nav-element">Connect</il>
-        </ul>
-      </div>
-    </header>
-    <canvas id="canvas"></canvas>
-    <section class="home">
-      <div class="container-ep-art">
-        <img src="assets/img/phoenixx-self-titled.png" />
-      </div>
+  <body>
+    <section class="home fade-in">
+      <header>
+        <div class="title-main">
+          <h1>Phoenixx</h1>
+        </div>
+        <div class="nav-container">
+          <ul class="nav">
+            <il class="nav-element">Events</il>
+            <il class="nav-element">About</il>
+            <il class="nav-element">Connect</il>
+            <il class="nav-element">Gallery</il>
+          </ul>
+        </div>
+      </header>
+        <div class="container-ep-art">
+          <img
+            src="assets/img/phoenixx-self-titled.png"
+            alt="Album Artwork for Self Titled by Phoenixx"
+          />
+        </div>
     </section>
     <footer>
-      <img id="sitback" src="assets/img/sitback.png" />
-      <div class="copyright-info">
+      <img
+        id="sitback"
+        src="assets/img/sitback.png"
+        alt="A picture of a sat watching the stars"
+      />
+      <div class="copyright-info fade-in">
         Copyright &#169; <br />
         Phoenixx 2023
       </div>
-      <ul class="links-social">
-        <li><i class="fa-brands fa-spotify"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
-        <li><i class="fa-brands fa-facebook"></i></li>
-        <li><i class="fa-brands fa-youtube"></i></li>
-      </ul>
+      <div class="links-social fade-in">
+        <ul>
+          <li class="spotify point-at"><i class="fa-brands fa-spotify"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+      </div>
     </footer>
+    <canvas id="canvas"></canvas>
   </body>
 </html>

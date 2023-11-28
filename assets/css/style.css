@@ -78,16 +78,17 @@ section {
 
 .nav-container {
   text-align: center;
-  /* font-family: 'Glory', sans-serif; */
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Glory', sans-serif;
+  /* font-family: "Inter Tight", sans-serif; */
   font-weight: 600;
-  font-size: 25px;
-  word-spacing: 25px;
+  font-size: 35px;
+  letter-spacing: 1.5px;
+  word-spacing: 15px;
   line-height: 40px;
 }
 .nav {
   display: inline-block;
-  padding: 15px;
+  padding: 15px 5px;
   list-style-type: none;
   border-radius: 8px;
   background-color: rgba(97, 75, 113, 0.212);
@@ -133,17 +134,19 @@ footer {
   width: 100%;
 }
 .links-social {
+  float: right;
+}
+.links-social ul {
   text-align: center;
   padding-right: 7px;
   padding-bottom: 10px;
   list-style-type: none;
-  float: right;
   font-size: 28px;
   color: var(--color--purple-bold);
 }
 .copyright-info {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   left: 50%;
   transform: translate(-50%);
   min-width: 100px;
@@ -155,11 +158,41 @@ footer {
   background-color: rgba(194, 193, 193, 0.524);
   color: #3b3b3b;
 }
+.point-at::before {
+  position: absolute;
+  right: 48px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  color: var(--color--yellow);
+  animation: pointAnimation ease 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.point-at::after {
+  position: absolute;
+  right: 11px;
+  bottom: 145px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f107";
+  color: var(--color--yellow); 
+  animation: pointAnimation ease 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+/************************* SECTIONS *************************/
+
+.home section {
+  animation: fadeInAnimation ease 10s;
+  animation-delay: 6s;
+}
 
 /************************* ANIMATIONS *************************/
 
 .fade-in {
-  animation: fadeInAnimation ease 3s;
+  animation: fadeInAnimation ease 8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -167,6 +200,33 @@ footer {
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
+  }
+  90% {
+    opactity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pointAnimation {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
