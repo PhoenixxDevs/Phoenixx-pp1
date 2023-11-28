@@ -45,17 +45,6 @@ section {
   --color--yellow: rgb(234, 226, 158);
 }
 
-/************************* IMAGES *************************/
-
-#sitback {
-  max-height: 70%;
-  min-height: 10%;
-  width: auto;
-  position: absolute;
-  bottom: 2%;
-  left: -2%;
-}
-
 /************************* HEADER AND NAV *************************/
 
 .title-main {
@@ -67,18 +56,20 @@ section {
 .title-main h1 {
   width: 300px;
   margin: 8vh auto;
+  margin-bottom: 2vh;
   text-align: center;
   top: 12%;
-  font-size: 90px;
-  font-family: 'Qwitcher Grypen', sans-serif;
+  font-size: 80px;
+  font-family: "Qwitcher Grypen", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
 
-  background:
-  linear-gradient( 164deg,
-    var(--color--purple-bold) 0, 
-    var(--color--purple-light)35%,
-    var(--color--yellow) 100%);
+  background: linear-gradient(
+    164deg,
+    var(--color--purple-bold) 0,
+    var(--color--purple-light) 35%,
+    var(--color--yellow) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,74 +77,83 @@ section {
 }
 
 .nav-container {
-  text-align:center;
+  text-align: center;
   /* font-family: 'Glory', sans-serif; */
-  font-family: 'Inter Tight', sans-serif; 
+  font-family: "Inter Tight", sans-serif;
   font-weight: 600;
-  font-size: 35px;
-  word-spacing: 30px;
-  line-height: 80px;
-  padding-bottom: 18px;
+  font-size: 25px;
+  word-spacing: 25px;
+  line-height: 40px;
 }
 .nav {
   display: inline-block;
   padding: 15px;
   list-style-type: none;
   border-radius: 8px;
-  background-color: rgba(223, 222, 221, 0.1);
+  background-color: rgba(97, 75, 113, 0.212);
   color: var(--color--purple-bold);
-  text-shadow: 1px 1px 3px rgba(234, 226, 158, 0.569);
-  box-shadow: 1px 1px 7px rgba(234, 226, 158, 0.569);
+  text-shadow: 1px 0 2px rgba(234, 226, 158, 0.569),
+    -1px 0 2px rgba(234, 226, 158, 0.569), 0 1px 2px rgba(234, 226, 158, 0.569),
+    0 -1px 2px rgba(234, 226, 158, 0.569);
+  box-shadow: 0 0 17px rgba(97, 75, 113, 0.569);
 }
-
+.nav-element {
+  cursor: pointer;
+}
 
 /************************* HOME SECTION *************************/
 
 .container-ep-art {
-  padding-top: 50px;
+  margin-top: 6vh;
 }
-.container-ep-art img{
+.container-ep-art img {
   border-radius: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 200px;
+  max-width: 130px;
   height: auto;
-  box-shadow: 0 0 10px rgba(244,243,242,0.8);
+  box-shadow: 0 0 10px rgba(244, 243, 242, 0.8);
 }
 
 /************************* FOOTER *************************/
 
+#sitback {
+  max-height: 70%;
+  min-height: 10%;
+  width: auto;
+  position: absolute;
+  bottom: -1%;
+  left: -5%;
+}
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-
+.links-social {
+  text-align: center;
+  padding-right: 7px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  float: right;
+  font-size: 28px;
+  color: var(--color--purple-bold);
+}
 .copyright-info {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);
-  min-width: 160px;
+  min-width: 100px;
   padding: 3px 8px;
   border: 1px solid rgba(255, 255, 255, 0.23);
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
   border-radius: 8px;
   background-color: rgba(194, 193, 193, 0.524);
   color: #3b3b3b;
-}
-
-.links-social {
-  text-align: center;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  list-style-type: none;
-  float: right;
-  font-size: 34px;
-  color: var(--color--purple-bold);
 }
 
 /************************* ANIMATIONS *************************/
@@ -166,45 +166,9 @@ footer {
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
-   }
-}
-
-
-/* Test */
-
-.arrow {
-  position: fixed;
-  bottom: 25%;
-  right: 20px;
-  width: calc(50% - 135px);
-  height: 13%;
-  transform: rotateZ(135deg);
-  transform: rotateY(180deg);
-  /* uncomment to see the arrow's rectangle bg*/
-/*   background: white;  */
-}
-
-
-.arrow__body {
-  width: 100%;
-  height: 95%;
-  margin-left: 14px;
-  border-width: 3px 0 0 3px;
-  border-style: dashed;
-  border-color: var(--color--yellow);
-  border-top-left-radius: 300%;
-}
-
-.arrow__body::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 5px;
-  border-width: 15px 10px 0;
-  border-style: solid;
-  border-color: var(--color--yellow) transparent transparent;
+    opacity: 1;
+  }
 }
