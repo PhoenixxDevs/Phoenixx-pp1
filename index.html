@@ -176,15 +176,19 @@
         switch (section) {
           case "events":
             toggleElementClass(eventsNav, customClasses.active, 1);
+            toggleElementClass(navContainer.children[0], customClasses.active, 1);
             break;
-          case "about":
+            case "about":
             toggleElementClass(aboutNav, customClasses.active, 1);
+            toggleElementClass(navContainer.children[0], customClasses.active, 1);
             break;
-          case "connect":
+            case "connect":
             toggleElementClass(connectNav, customClasses.active, 1);
+            toggleElementClass(navContainer.children[0], customClasses.active, 1);
             break;
-          case "gallery":
+            case "gallery":
             toggleElementClass(galleryNav, customClasses.active, 1);
+            toggleElementClass(navContainer.children[0], customClasses.active, 1);
             break;
           case "home":
             break;

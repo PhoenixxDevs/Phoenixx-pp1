@@ -84,16 +84,25 @@ section {
   padding: 0;
   margin: 0;
 }
-.title-responsive h1{
+.title-responsive h1 {
   height: 100%;
   text-align: left;
   padding: 0;
   padding-left: 3vw;
   padding-top: 2vw;
   margin: auto 0;
-  font-size: 45px;
+  font-size: 48px;
+  text-shadow: none;
+  background: linear-gradient(
+    183deg,
+    var(--color--purple-bold) 0,
+    var(--color--purple-light) 23%,
+    var(--color--yellow) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 
 .nav-container {
   text-align: center;
@@ -104,6 +113,7 @@ section {
   letter-spacing: 1.5px;
   word-spacing: 15px;
   line-height: 40px;
+  user-select: none;
 }
 .nav {
   display: inline-block;
@@ -118,34 +128,38 @@ section {
   box-shadow: 0 0 17px rgba(97, 75, 113, 0.569);
   user-select: none;
 }
-.nav-element {
+.nav-element li{
   z-index: 2;
   display: inline-block;
   cursor: pointer;
+  transition: all 0.3s ease;
   user-select: none;
-  transition: all 0.3s;
 }
 .nav-element:hover {
   color: var(--color--yellow);
   text-shadow: 3px 0 6px rgba(234, 226, 158, 0.569),
-    -3px 0 6px rgba(234, 226, 158, 0.569), 0 3px 6px rgba(234, 226, 158, 0.569),
-    0 -3px 6px rgba(234, 226, 158, 0.569);
-    transform: scale(1.1);
+  -3px 0 6px rgba(234, 226, 158, 0.569), 0 3px 6px rgba(234, 226, 158, 0.569),
+  0 -3px 6px rgba(234, 226, 158, 0.569);
+  transition: all 0.3s;
+  /* transform: scale(1.1);  */
+  user-select: none;
 }
-.nav-element:active{
+.nav-element:active {
   transition: all 0.1s;
   color: var(--color--purple-dark);
   user-select: none;
   transform: translateZ(25px);
 }
 .nav-responsive {
-  z-index: 1;
+  user-select: none;
+  z-index: -2;
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 9vh;
+  background-color: var(--color--purple-dark);
   /* border: 1px solid white; */
 }
 
@@ -239,6 +253,15 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.active {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  position: absolute;
+  left: 3vw;
+  top: calc(2vw + 12px);
 }
 
 /************************* ANIMATIONS *************************/
