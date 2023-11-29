@@ -63,7 +63,7 @@
         />
       </div>
     </section>
-    <section class="events"></section>
+    <!-- <section class="events"></section> -->
     <footer>
       <img
         id="sitback"
@@ -149,8 +149,10 @@
       }
 
       function pageReformat(section) {
-        toggleElementClass(homeSection, customClasses.hidden, 1);
-        toggleElementClass(title, customClasses.titleResponsive, 1);
+        toggleElementClass(homeSection, customClasses.hidden, 1); //hide home secrion
+        toggleElementClass(title, customClasses.titleResponsive, 1); // move phoenixx
+        navContainer.appendChild(title); // move title to nav container
+        console.log(navContainer)
         if (window.innerWidth < 1024) {
           // If tablet or below make burger menu
           toggleElementClass(navContainer, customClasses.navResponsive, 1);
@@ -167,10 +169,10 @@
         // Turns off active class on all sections apart from current
         for (let i = 0; i < navChildren.length; i++) {
           toggleElementClass(navChildren[i], customClasses.active, 0);
-          if (section === navChildren[i].id) {
+          if (section === navChildren[i].id) { // stops current page label from being hidden
             continue;
           } else {
-            toggleElementClass(navChildren[i], customClasses.hidden, 1);
+            toggleElementClass(navChildren[i], customClasses.hidden, 1); // hide all other page labels for making burger menu
           }
         }
         switch (section) {
