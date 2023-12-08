@@ -23,7 +23,11 @@
   </head>
   <body>
     <header>
-      <div class="title-main fade-in" id="title">
+      <div
+        class="title-main fade-in"
+        id="title"
+        onclick="handleSectionChange('home')"
+      >
         <h1>Phoenixx</h1>
       </div>
       <div class="nav-container" id="nav-container">
@@ -63,7 +67,7 @@
         />
       </div>
     </section>
-    <!-- <section class="events"></section> -->
+    <section class="events hidden"></section>
     <footer>
       <img
         id="sitback"
@@ -119,6 +123,7 @@
     <script>
       const homeSection = document.getElementById("home-section");
       const title = document.getElementById("title");
+      const header = document.querySelector("header");
       const navContainer = document.getElementById("nav-container");
       const linksSocial = document.getElementById("links-social");
       const navChildren = navContainer.children[0].children;
@@ -135,62 +140,111 @@
         titleResponsive: "title-responsive",
       };
 
-      function hideSocials() {
+      function toggleSocials(state) {
         // Cycle through all elements in social link list and set display none
         for (let i = 0; i < socialElements.length; i++) {
-          toggleElementClass(socialElements[i], customClasses.hidden, 1);
+          toggleElementClass(socialElements[i], customClasses.hidden, state);
         }
       }
 
       function toggleElementClass(element, className, state) {
+        // if state then add, else remove
         state
           ? element.classList.add(className)
           : element.classList.remove(className);
       }
 
       function pageReformat(section) {
-        toggleElementClass(homeSection, customClasses.hidden, 1); //hide home secrion
-        toggleElementClass(title, customClasses.titleResponsive, 1); // move phoenixx
-        navContainer.appendChild(title); // move title to nav container
-        console.log(navContainer)
-        if (window.innerWidth < 1024) {
-          // If tablet or below make burger menu
-          toggleElementClass(navContainer, customClasses.navResponsive, 1);
-          if (window.innerWidth < 768) {
-            hideSocials();
-            section === "gallery"
-              ? (socialElements[1].style.display = "block")
-              : (socialElements[1].style.display = "none");
+        if (section != "home") {
+          toggleElementClass(homeSection, customClasses.hidden, 1); //hide home section
+          toggleElementClass(title, customClasses.titleResponsive, 1); // move phoenixx
+          navContainer.appendChild(title); // move title to nav container
+          console.log(navContainer);
+          if (window.innerWidth < 1024) {
+            // If tablet or below make burger menu
+            toggleElementClass(navContainer, customClasses.navResponsive, 1);
+            if (window.innerWidth < 768) {
+              // If mobile or below hide socials
+              toggleSocials(1);
+              // If gallery, keep Instagram
+              section === "gallery"
+                ? toggleElementClass(socialElements[1], customClasses.hidden, 0)
+                : toggleElementClass(
+                    socialElements[1],
+                    customClasses.hidden,
+                    1
+                  );
+            }
+          }
+        } else {
+          toggleElementClass(homeSection, customClasses.hidden, 0); //hide home section
+          toggleElementClass(title, customClasses.titleResponsive, 0); // move phoenixx
+          header.appendChild(title); // move title to original position
+          header.appendChild(navContainer); // move title to original position
+          if (window.innerWidth < 1024) {
+            // If tablet or below remove burger menu
+            toggleElementClass(navContainer, customClasses.navResponsive, 0);
+            toggleElementClass(navContainer, customClasses.active, 0);
+            if (window.innerWidth < 768) {
+              // If mobile or below show socials
+              toggleSocials(0);
+            }
           }
         }
       }
 
       function setActiveSection(section) {
         // Turns off active class on all sections apart from current
-        for (let i = 0; i < navChildren.length; i++) {
-          toggleElementClass(navChildren[i], customClasses.active, 0);
-          if (section === navChildren[i].id) { // stops current page label from being hidden
-            continue;
-          } else {
-            toggleElementClass(navChildren[i], customClasses.hidden, 1); // hide all other page labels for making burger menu
+        if (section === "home") {
+          toggleElementClass(navContainer.children[0], customClasses.active, 0);
+          for(let j = 0; j < navChildren.length; j++) {
+            console.log(navChildren[j]);
+            toggleElementClass(navChildren[j], customClasses.active, 0);
+            toggleElementClass(navChildren[j], customClasses.hidden, 0);
+          }
+        } else {
+          for (let i = 0; i < navChildren.length; i++) {
+            toggleElementClass(navChildren[i], customClasses.active, 0);
+            if (section === navChildren[i].id) {
+              // stops current page label from being hidden
+              continue;
+            } else {
+              toggleElementClass(navChildren[i], customClasses.hidden, 1); // hide all other page labels for making burger menu
+            }
           }
         }
         switch (section) {
           case "events":
             toggleElementClass(eventsNav, customClasses.active, 1);
-            toggleElementClass(navContainer.children[0], customClasses.active, 1);
+            toggleElementClass(
+              navContainer.children[0],
+              customClasses.active,
+              1
+            );
             break;
-            case "about":
+          case "about":
             toggleElementClass(aboutNav, customClasses.active, 1);
-            toggleElementClass(navContainer.children[0], customClasses.active, 1);
+            toggleElementClass(
+              navContainer.children[0],
+              customClasses.active,
+              1
+            );
             break;
-            case "connect":
+          case "connect":
             toggleElementClass(connectNav, customClasses.active, 1);
-            toggleElementClass(navContainer.children[0], customClasses.active, 1);
+            toggleElementClass(
+              navContainer.children[0],
+              customClasses.active,
+              1
+            );
             break;
-            case "gallery":
+          case "gallery":
             toggleElementClass(galleryNav, customClasses.active, 1);
-            toggleElementClass(navContainer.children[0], customClasses.active, 1);
+            toggleElementClass(
+              navContainer.children[0],
+              customClasses.active,
+              1
+            );
             break;
           case "home":
             break;
@@ -203,19 +257,19 @@
             pageReformat(section);
             setActiveSection("events");
             break;
-            case "about":
+          case "about":
             pageReformat(section);
             setActiveSection("about");
             break;
-            case "connect":
+          case "connect":
             pageReformat(section);
             setActiveSection("connect");
             break;
-            case "gallery":
+          case "gallery":
             pageReformat(section);
             setActiveSection("gallery");
             break;
-            case "home":
+          case "home":
             pageReformat(section);
             setActiveSection("home");
             break;
