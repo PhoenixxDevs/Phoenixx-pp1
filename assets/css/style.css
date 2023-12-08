@@ -69,7 +69,7 @@ section {
   background: linear-gradient(
     71deg,
     var(--color--purple-bold) 0,
-    var(--color--purple-light) 35%,
+    var(--color--purple-light) 25%,
     var(--color--yellow) 100%
   );
   background-clip: text;
@@ -93,9 +93,9 @@ section {
   font-size: 48px;
   text-shadow: none;
   background: linear-gradient(
-    183deg,
+    192deg,
     var(--color--purple-bold) 0,
-    var(--color--purple-light) 23%,
+    var(--color--purple-light) 13%,
     var(--color--yellow) 100%
   );
   background-clip: text;

@@ -55,9 +55,9 @@ class Particle {
       y: Math.floor(Math.random() * HEIGHT),
     };
     this.vel = {
-      // velocity to random amount between -0.1 and 0.1, two decimal places for performance
-      x: Math.floor(Math.random() * 20) / 100 - 0.1,
-      y: Math.floor(Math.random() * 20) / 100 - 0.1,
+      // velocity to random amount between -0.2 and 0.2, two decimal places for performance
+      x: Math.floor(Math.random() * 40) / 100 - 0.2,
+      y: Math.floor(Math.random() * 40) / 100 - 0.2,
     };
     this.color = `rgba(245, 246, 247, ${
       (Math.floor(Math.random() * 70) + 30) / 100
