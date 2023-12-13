@@ -54,7 +54,6 @@ section {
   user-select: none;
   transition: all 2s ease;
 }
-
 .title-main h1 {
   width: 300px;
   margin: 4vh auto;
@@ -78,18 +77,19 @@ section {
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.78);
   transition: all 1s ease;
 }
-
 .title-responsive {
   float: left;
   padding: 0;
   margin: 0;
 }
 .title-responsive h1 {
+  position: relative;
   height: 100%;
   text-align: left;
   padding: 0;
-  padding-left: 10px;
-  margin: auto 0;
+  padding-left: 5px;
+  margin: 0;
+  margin-top: 7px;
   font-size: 48px;
   text-shadow: none;
   background: linear-gradient(
@@ -102,7 +102,6 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .nav-container {
   text-align: center;
   font-family: "Glory", sans-serif;
@@ -157,9 +156,25 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 9vh;
+  height: 56px;
   background-color: var(--color--purple-dark);
   /* border: 1px solid white; */
+}
+#burger {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+#burger div {
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  margin: 7px 0;
+}
+
+#burger .open-menu {
+
+  box-shadow: 0 0 5px var(--color--yellow);
 }
 
 /************************* HOME SECTION *************************/
@@ -167,14 +182,37 @@ section {
 .container-ep-art {
   margin-top: 6vh;
 }
-.container-ep-art img {
+.container-ep-art a img {
   border-radius: 15px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-top: 10vh;
   max-width: 130px;
   height: auto;
   box-shadow: 0 0 10px rgba(244, 243, 242, 0.8);
+}
+
+#home-section {
+  animation: fadeInAnimation ease 6s;
+  /* animation-delay: 1s; */
+}
+
+/************************* SECTION CHANGES *************************/
+
+.hidden {
+  display: none;
+}
+.active {
+  z-index: -10;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin: 0;
+  position: absolute;
+  font-size: 20px;
+  left: 10px;
+  top: 29px;
+  background-color: rgba(167, 95, 214, 0.2);
+  border: 1px, solid, white;
 }
 
 /************************* FOOTER *************************/
@@ -241,26 +279,6 @@ footer {
   animation: pointAnimation ease 10s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
-}
-
-/************************* SECTIONS *************************/
-
-#home-section {
-  animation: fadeInAnimation ease 6s;
-  /* animation-delay: 1s; */
-}
-
-.hidden {
-  display: none;
-}
-
-.active {
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  position: absolute;
-  left: 3vw;
-  top: calc(2vw + 12px);
 }
 
 /************************* ANIMATIONS *************************/

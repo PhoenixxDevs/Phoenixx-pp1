@@ -31,7 +31,7 @@
         <h1>Phoenixx</h1>
       </div>
       <div class="nav-container" id="nav-container">
-        <ul class="nav">
+        <ul class="nav fade-in">
           <il
             class="nav-element"
             onclick="handleSectionChange('events')"
@@ -57,14 +57,25 @@
             >Gallery</il
           >
         </ul>
+        <div id="burger" class="hidden" onclick="handleBurger()">
+          <div class="bar-1"></div>
+          <div class="bar-2"></div>
+          <div class="bar-3"></div>
+        </div>
       </div>
     </header>
     <section class="home fade-in" id="home-section">
       <div class="container-ep-art">
-        <img
-          src="assets/img/phoenixx-self-titled.png"
-          alt="Album Artwork for Self Titled by Phoenixx"
-        />
+        <a
+          href="https://open.spotify.com/album/5hILJsRqiJY2E9GlVoTGiO?si=d9d8e1b5c368496b"
+          target="_blank"
+          aria-label="Link to Some Album on Spotify. Opens in a new tab."
+        >
+          <img
+            src="assets/img/phoenixx-self-titled.png"
+            alt="Album Artwork for Self Titled by Phoenixx"
+          />
+        </a>
       </div>
     </section>
     <section class="events hidden"></section>
@@ -126,6 +137,7 @@
       const header = document.querySelector("header");
       const navContainer = document.getElementById("nav-container");
       const linksSocial = document.getElementById("links-social");
+      const burger = document.getElementById("burger");
       const navChildren = navContainer.children[0].children;
       const eventsNav = navChildren[0];
       const aboutNav = navChildren[1];
@@ -138,6 +150,7 @@
         active: "active",
         navResponsive: "nav-responsive",
         titleResponsive: "title-responsive",
+        openMenu: "open-menu"
       };
 
       function toggleSocials(state) {
@@ -163,6 +176,7 @@
           if (window.innerWidth < 1024) {
             // If tablet or below make burger menu
             toggleElementClass(navContainer, customClasses.navResponsive, 1);
+            toggleElementClass(burger, 'hidden', 0);
             if (window.innerWidth < 768) {
               // If mobile or below hide socials
               toggleSocials(1);
@@ -180,9 +194,10 @@
           toggleElementClass(homeSection, customClasses.hidden, 0); //hide home section
           toggleElementClass(title, customClasses.titleResponsive, 0); // move phoenixx
           header.appendChild(title); // move title to original position
-          header.appendChild(navContainer); // move title to original position
+          header.appendChild(navContainer); // move nav to original position
           if (window.innerWidth < 1024) {
             // If tablet or below remove burger menu
+            toggleElementClass(burger, 'hidden', 1);
             toggleElementClass(navContainer, customClasses.navResponsive, 0);
             toggleElementClass(navContainer, customClasses.active, 0);
             if (window.innerWidth < 768) {
@@ -197,7 +212,7 @@
         // Turns off active class on all sections apart from current
         if (section === "home") {
           toggleElementClass(navContainer.children[0], customClasses.active, 0);
-          for(let j = 0; j < navChildren.length; j++) {
+          for (let j = 0; j < navChildren.length; j++) {
             console.log(navChildren[j]);
             toggleElementClass(navChildren[j], customClasses.active, 0);
             toggleElementClass(navChildren[j], customClasses.hidden, 0);
@@ -274,6 +289,10 @@
             setActiveSection("home");
             break;
         }
+      }
+
+      function handleBurger() {
+        burger.classList.toggle(customClasses.openMenu);
       }
     </script>
   </body>
