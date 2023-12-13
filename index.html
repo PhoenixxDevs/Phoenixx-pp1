@@ -57,10 +57,10 @@
             >Gallery</il
           >
         </ul>
-        <div id="burger" class="hidden" onclick="handleBurger()">
-          <div class="bar-1"></div>
-          <div class="bar-2"></div>
-          <div class="bar-3"></div>
+        <div id="burger" class="burger hidden" onclick="handleBurger()">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
         </div>
       </div>
     </header>
@@ -292,7 +292,9 @@
       }
 
       function handleBurger() {
-        burger.classList.toggle(customClasses.openMenu);
+        for(let i = 0; i < burger.children.length; i++){
+          burger.children[i].classList.toggle(customClasses.openMenu);
+        }
       }
     </script>
   </body>

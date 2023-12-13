@@ -78,11 +78,13 @@ section {
   transition: all 1s ease;
 }
 .title-responsive {
+  width: 50%;
   float: left;
   padding: 0;
   margin: 0;
 }
 .title-responsive h1 {
+  width: 100%;
   position: relative;
   height: 100%;
   text-align: left;
@@ -158,25 +160,38 @@ section {
   width: 100%;
   height: 56px;
   background-color: var(--color--purple-dark);
-  /* border: 1px solid white; */
 }
-#burger {
+.burger {
+  z-index: 100;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0;
+  right: 2px;
+  padding: 8px;
 }
-#burger div {
+.bar {
   width: 32px;
   height: 3px;
-  background-color: white;
+  background-color: rgba(244, 243, 242, 0.8);
   margin: 7px 0;
+  transition: all 0.3s ease-in-out;
 }
 
-#burger .open-menu {
-
-  box-shadow: 0 0 5px var(--color--yellow);
+.open-menu {
+  background-color: var(--color--yellow);
 }
 
+.open-menu.bar-1{
+  transform: translateY(12px) rotateZ(90deg);
+}
+.open-menu.bar-2  {
+  width: 16px;
+  transform: translate(3px, 11px) rotateZ(50deg);
+}
+.open-menu.bar-3 {
+  width: 16px;
+  transform: translate(13px, 1px) rotateZ(-50deg);
+}
+ 
 /************************* HOME SECTION *************************/
 
 .container-ep-art {
