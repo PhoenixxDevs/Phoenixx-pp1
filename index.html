@@ -62,6 +62,7 @@
           <div class="bar bar-2"></div>
           <div class="bar bar-3"></div>
         </div>
+        <div id="nav-container-burger" class="hidden"></div>
       </div>
     </header>
     <section class="home fade-in" id="home-section">
@@ -137,6 +138,7 @@
       const header = document.querySelector("header");
       const linksSocial = document.getElementById("links-social");
       const burger = document.getElementById("burger");
+      const burgerNav = document.getElementById("nav-container-burger");
       const navContainer = document.getElementById("nav-container");
       const navChildren = navContainer.children[0].children;
       const eventsNav = navChildren[0];
@@ -144,47 +146,56 @@
       const connectNav = navChildren[2];
       const galleryNav = navChildren[3];
       const socialElements = linksSocial.children[0].children;
-      
+
       const customClasses = {
         hidden: "hidden",
         active: "active",
         navResponsive: "nav-responsive",
         titleResponsive: "title-responsive",
-        openMenu: "open-menu"
+        openMenu: "open-menu",
       };
-      
+
       let navClone;
-      
+
       function toggleSocials(state) {
         // Cycle through all elements in social link list and set display none
         for (let i = 0; i < socialElements.length; i++) {
           toggleElementClass(socialElements[i], customClasses.hidden, state);
         }
       }
-      
+
       function toggleElementClass(element, className, state) {
         // if state then add, else remove
         state
-        ? element.classList.add(className)
-        : element.classList.remove(className);
+          ? element.classList.add(className)
+          : element.classList.remove(className);
       }
-      
+
       function handleBurger() {
-        for(let i = 0; i < burger.children.length; i++){
+        for (let i = 0; i < burger.children.length; i++) {
           burger.children[i].classList.toggle(customClasses.openMenu);
         }
-        // clone current navigation
-        navClone = navContainer.children[0].cloneNode(true);
-        console.log(navClone.children)
-        for(let j = 0; j < navClone.children.length; j++){
-          //check for active section
-          if(navClone.children[j].classList.contains('active')){
-            navClone.removeChild(navClone.children[j]);
-            console.log(navClone);
+        if (burger.children[0].classList.contains("open-menu")) {
+          // clone current navigation
+          navClone = navContainer.children[0].cloneNode(true);
+          console.log(navClone.children);
+          for (let j = 0; j < navClone.children.length; j++) {
+
+            toggleElementClass(navClone.children[j], customClasses.hidden, 0);
+            //check for active section
+            if (navClone.children[j].classList.contains("active")) {
+              navClone.removeChild(navClone.children[j]);
+            }
           }
+          burgerNav.appendChild(navClone);
+          toggleElementClass(burgerNav, customClasses.hidden, 0);
+        } else {
+          burgerNav.removeChild(navClone);
+          toggleElementClass(burgerNav, customClasses.hidden, 1);
         }
+        console.log(burgerNav);
       }
-      
+
       function pageReformat(section) {
         if (section != "home") {
           toggleElementClass(homeSection, customClasses.hidden, 1); //hide home section
@@ -193,7 +204,7 @@
           if (window.innerWidth < 1024) {
             // If tablet or below make burger menu
             toggleElementClass(navContainer, customClasses.navResponsive, 1);
-            toggleElementClass(burger, 'hidden', 0);
+            toggleElementClass(burger, "hidden", 0);
             if (window.innerWidth < 768) {
               // If mobile or below hide socials
               toggleSocials(1);
@@ -214,7 +225,7 @@
           header.appendChild(navContainer); // move nav to original position
           if (window.innerWidth < 1024) {
             // If tablet or below remove burger menu
-            toggleElementClass(burger, 'hidden', 1);
+            toggleElementClass(burger, "hidden", 1);
             toggleElementClass(navContainer, customClasses.navResponsive, 0);
             toggleElementClass(navContainer, customClasses.active, 0);
             if (window.innerWidth < 768) {
@@ -306,7 +317,6 @@
             break;
         }
       }
-
     </script>
   </body>
 </html>
