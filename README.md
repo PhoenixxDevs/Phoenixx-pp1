@@ -77,6 +77,8 @@ Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitt
 |Colour Palette Design|https://color.adobe.com/My-Color-Theme-color-theme-889ac981-1580-4518-8afb-66671f0c0db8|
 |Choosing colours|https://careerfoundry.com/en/blog/ui-design/introduction-to-color-theory-and-color-palettes/|
 |Gradient Text|https://cssgradient.io/blog/css-gradient-text/|
+|Burger Menu in CSS|https://www.w3schools.com/howto/howto_css_menu_icon.asp|
+|Cloning Element for Burger Menu|https://gomakethings.com/how-to-copy-or-clone-an-element-with-vanilla-js/#:~:text=You%20call%20the%20cloneNode(),of%20it%20var%20clone%20%3D%20elem.|
 |[About Section](#about) Container Horizontal Scrolling|https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/|
 |[About Section](#about) Container Scroll Snapping|https://alvarotrigo.com/blog/css-snap-scroll-horizontally/|
 |[Home Section](#home) Responsive CSS Arrow|https://codepen.io/pamcy/pen/wQbEao?editors=1100|

@@ -135,16 +135,16 @@
       const homeSection = document.getElementById("home-section");
       const title = document.getElementById("title");
       const header = document.querySelector("header");
-      const navContainer = document.getElementById("nav-container");
       const linksSocial = document.getElementById("links-social");
       const burger = document.getElementById("burger");
+      const navContainer = document.getElementById("nav-container");
       const navChildren = navContainer.children[0].children;
       const eventsNav = navChildren[0];
       const aboutNav = navChildren[1];
       const connectNav = navChildren[2];
       const galleryNav = navChildren[3];
       const socialElements = linksSocial.children[0].children;
-
+      
       const customClasses = {
         hidden: "hidden",
         active: "active",
@@ -152,27 +152,44 @@
         titleResponsive: "title-responsive",
         openMenu: "open-menu"
       };
-
+      
+      let navClone;
+      
       function toggleSocials(state) {
         // Cycle through all elements in social link list and set display none
         for (let i = 0; i < socialElements.length; i++) {
           toggleElementClass(socialElements[i], customClasses.hidden, state);
         }
       }
-
+      
       function toggleElementClass(element, className, state) {
         // if state then add, else remove
         state
-          ? element.classList.add(className)
-          : element.classList.remove(className);
+        ? element.classList.add(className)
+        : element.classList.remove(className);
       }
-
+      
+      function handleBurger() {
+        for(let i = 0; i < burger.children.length; i++){
+          burger.children[i].classList.toggle(customClasses.openMenu);
+        }
+        // clone current navigation
+        navClone = navContainer.children[0].cloneNode(true);
+        console.log(navClone.children)
+        for(let j = 0; j < navClone.children.length; j++){
+          //check for active section
+          if(navClone.children[j].classList.contains('active')){
+            navClone.removeChild(navClone.children[j]);
+            console.log(navClone);
+          }
+        }
+      }
+      
       function pageReformat(section) {
         if (section != "home") {
           toggleElementClass(homeSection, customClasses.hidden, 1); //hide home section
           toggleElementClass(title, customClasses.titleResponsive, 1); // move phoenixx
           navContainer.appendChild(title); // move title to nav container
-          console.log(navContainer);
           if (window.innerWidth < 1024) {
             // If tablet or below make burger menu
             toggleElementClass(navContainer, customClasses.navResponsive, 1);
@@ -180,7 +197,7 @@
             if (window.innerWidth < 768) {
               // If mobile or below hide socials
               toggleSocials(1);
-              // If gallery, keep Instagram
+              // If Gallery, keep Instagram
               section === "gallery"
                 ? toggleElementClass(socialElements[1], customClasses.hidden, 0)
                 : toggleElementClass(
@@ -191,7 +208,7 @@
             }
           }
         } else {
-          toggleElementClass(homeSection, customClasses.hidden, 0); //hide home section
+          toggleElementClass(homeSection, customClasses.hidden, 0); // show home section
           toggleElementClass(title, customClasses.titleResponsive, 0); // move phoenixx
           header.appendChild(title); // move title to original position
           header.appendChild(navContainer); // move nav to original position
@@ -213,7 +230,6 @@
         if (section === "home") {
           toggleElementClass(navContainer.children[0], customClasses.active, 0);
           for (let j = 0; j < navChildren.length; j++) {
-            console.log(navChildren[j]);
             toggleElementClass(navChildren[j], customClasses.active, 0);
             toggleElementClass(navChildren[j], customClasses.hidden, 0);
           }
@@ -291,11 +307,6 @@
         }
       }
 
-      function handleBurger() {
-        for(let i = 0; i < burger.children.length; i++){
-          burger.children[i].classList.toggle(customClasses.openMenu);
-        }
-      }
     </script>
   </body>
 </html>
