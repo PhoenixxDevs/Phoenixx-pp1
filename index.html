@@ -57,12 +57,14 @@
             >Gallery</il
           >
         </ul>
-        <div id="burger" class="burger hidden" onclick="handleBurger()">
-          <div class="bar bar-1"></div>
-          <div class="bar bar-2"></div>
-          <div class="bar bar-3"></div>
+        <div>
+            <div id="burger" class="burger hidden" onclick="handleBurger()">
+            <div class="bar bar-1"></div>
+            <div class="bar bar-2"></div>
+            <div class="bar bar-3"></div>
+          </div>
+          <div id="nav-container-burger" class="nav-container-burger hidden"></div>
         </div>
-        <div id="nav-container-burger" class="hidden"></div>
       </div>
     </header>
     <section class="home fade-in" id="home-section">
@@ -187,6 +189,7 @@
             navClone.removeChild(activeElement);
           }          
           burgerNav.appendChild(navClone);
+          console.log(burgerNav)
           toggleElementClass(burgerNav, customClasses.hidden, 0);
         } else {
           burgerNav.removeChild(navClone);

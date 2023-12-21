@@ -161,6 +161,16 @@ section {
   height: 56px;
   background-color: var(--color--purple-dark);
 }
+.nav-container-burger.open-menu {
+  background-color: transparent;
+}
+.nav-container-burger ul{
+  float: right;
+  position: relative;
+  margin-top: 30px;
+  margin-right: 15px;
+  width: 90px;
+}
 .burger {
   z-index: 100;
   position: absolute;
