@@ -158,6 +158,7 @@
       };
 
       let navClone;
+      let burgerOpen = false;
 
       function toggleSocials(state) {
         // Cycle through all elements in social link list and set display none
@@ -177,7 +178,7 @@
         for (let i = 0; i < burger.children.length; i++) {
           burger.children[i].classList.toggle(customClasses.openMenu);
         }
-        if (burger.children[0].classList.contains("open-menu")) {
+        if (!burgerOpen) {
           // clone current navigation
           navClone = navContainer.children[0].cloneNode(true);
           for (let j = 0; j < navClone.children.length; j++) {
@@ -189,11 +190,12 @@
             navClone.removeChild(activeElement);
           }          
           burgerNav.appendChild(navClone);
-          console.log(burgerNav)
           toggleElementClass(burgerNav, customClasses.hidden, 0);
+          burgerOpen = true;
         } else {
           burgerNav.removeChild(navClone);
           toggleElementClass(burgerNav, customClasses.hidden, 1);
+          burgerOpen = false;
         }
       }
 
@@ -254,6 +256,8 @@
             } else {
               toggleElementClass(navChildren[i], customClasses.hidden, 1); // hide all other page labels for making burger menu
             }
+            // makes nav item appear from burger
+            
           }
         }
         switch (section) {
@@ -264,6 +268,9 @@
               customClasses.active,
               1
             );
+            if(burgerOpen) {
+              toggleElementClass(eventsNav, customClasses.hidden, 0);
+            }
             break;
           case "about":
             toggleElementClass(aboutNav, customClasses.active, 1);
@@ -272,6 +279,9 @@
               customClasses.active,
               1
             );
+            if(burgerOpen) {
+              toggleElementClass(aboutNav, customClasses.hidden, 0);
+            }
             break;
           case "connect":
             toggleElementClass(connectNav, customClasses.active, 1);
@@ -280,6 +290,9 @@
               customClasses.active,
               1
             );
+            if(burgerOpen) {
+              toggleElementClass(connectNav, customClasses.hidden, 0);
+            }
             break;
           case "gallery":
             toggleElementClass(galleryNav, customClasses.active, 1);
@@ -288,6 +301,9 @@
               customClasses.active,
               1
             );
+            if(burgerOpen) {
+              toggleElementClass(galleryNav, customClasses.hidden, 0);
+            }
             break;
           case "home":
             break;
@@ -317,6 +333,7 @@
             setActiveSection("home");
             break;
         }
+        if(burgerOpen){ handleBurger(); }
       }
     </script>
   </body>
