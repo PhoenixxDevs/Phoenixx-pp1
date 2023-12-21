@@ -173,7 +173,7 @@ section {
   height: 3px;
   background-color: rgba(244, 243, 242, 0.8);
   margin: 7px 0;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .open-menu {

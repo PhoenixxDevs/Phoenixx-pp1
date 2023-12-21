@@ -178,22 +178,20 @@
         if (burger.children[0].classList.contains("open-menu")) {
           // clone current navigation
           navClone = navContainer.children[0].cloneNode(true);
-          console.log(navClone.children);
           for (let j = 0; j < navClone.children.length; j++) {
-
             toggleElementClass(navClone.children[j], customClasses.hidden, 0);
-            //check for active section
-            if (navClone.children[j].classList.contains("active")) {
-              navClone.removeChild(navClone.children[j]);
-            }
           }
+          // Find element with the "active" class and remove it
+          const activeElement = navClone.querySelector(".active");
+          if (activeElement) {
+            navClone.removeChild(activeElement);
+          }          
           burgerNav.appendChild(navClone);
           toggleElementClass(burgerNav, customClasses.hidden, 0);
         } else {
           burgerNav.removeChild(navClone);
           toggleElementClass(burgerNav, customClasses.hidden, 1);
         }
-        console.log(burgerNav);
       }
 
       function pageReformat(section) {
