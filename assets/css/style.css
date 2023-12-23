@@ -222,7 +222,81 @@ section {
   /* animation-delay: 1s; */
 }
 
-/************************* SECTION CHANGES *************************/
+/************************* EVENTS SECTION *************************/
+
+.events {
+  display: none;
+  border-radius: 6px;
+  overflow-y: scroll;
+}
+.events.active {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  margin-left: 5%;
+  width: 90%;
+  height: 75%;
+  padding: 10px;
+}
+.event-item {
+  position: relative;
+  padding-left: 5px;
+  height: 25%;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 9px;
+  background-color: rgba(167, 95, 214, 0.2);
+}
+.event-item button {
+  float: right;
+
+}
+.event-location {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 20%;
+  height: 90%;
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.event-location div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+}
+.event-details {
+  display: inline-block;
+}
+
+/************************* ABOUT SECTION *************************/
+
+.about {
+  display: none;
+}
+
+/************************* GALLERY SECTION *************************/
+
+.gallery {
+  display: none;
+}
+
+/************************* CONNECT SECTION *************************/
+
+.connect {
+  display: none;
+}
+
+/************************* SECTION CHANGES **********************/
 
 .hidden {
   display: none;
@@ -233,9 +307,9 @@ section {
   padding: 0 10px;
   margin: 0;
   position: absolute;
-  font-size: 20px;
+  font-size: 18px;
   left: 10px;
-  top: 29px;
+  top: 25px;
   background-color: rgba(167, 95, 214, 0.2);
   border: 1px, solid, white;
 }

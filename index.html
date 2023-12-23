@@ -67,7 +67,7 @@
         </div>
       </div>
     </header>
-    <section class="home fade-in" id="home-section">
+    <section class="home fade-in" id="section-home">
       <div class="container-ep-art">
         <a
           href="https://open.spotify.com/album/5hILJsRqiJY2E9GlVoTGiO?si=d9d8e1b5c368496b"
@@ -81,7 +81,21 @@
         </a>
       </div>
     </section>
-    <section class="events hidden"></section>
+    <section class="events" id="section-events">
+      <div class="event-item">
+        <div class="event-location">
+          <div>Lon</div>
+        </div>
+        <div class="event-details"></div>
+        <button>Tickets!</button>
+      </div>
+      <div class="event-item"></div>
+      <div class="event-item"></div>
+      <div class="event-item"></div>
+    </section>
+    <section class="about" id="section-about"></section>
+    <section class="gallery" id="section-gallery"></section>
+    <section class="connect" id="section-connect"></section>
     <footer>
       <img
         id="sitback"
@@ -135,7 +149,11 @@
     </footer>
     <canvas id="canvas"></canvas>
     <script>
-      const homeSection = document.getElementById("home-section");
+      const homeSection = document.getElementById("section-home");
+      const eventsSection = document.getElementById("section-events");
+      const aboutSection = document.getElementById("section-about");
+      const gallerySection = document.getElementById("section-gallery");
+      const connectSection = document.getElementById("section-connect");
       const title = document.getElementById("title");
       const header = document.querySelector("header");
       const linksSocial = document.getElementById("links-social");
@@ -239,7 +257,16 @@
         }
       }
 
+      function removeActiveAllSections(){
+        toggleElementClass(eventsSection, customClasses.active, 0);
+        toggleElementClass(gallerySection, customClasses.active, 0);
+        toggleElementClass(aboutSection, customClasses.active, 0);
+        toggleElementClass(connectSection, customClasses.active, 0);
+        toggleElementClass(homeSection, customClasses.active, 0);
+      }
+
       function setActiveSection(section) {
+        //HANDLES NAV HIDING
         // Turns off active class on all sections apart from current
         if (section === "home") {
           toggleElementClass(navContainer.children[0], customClasses.active, 0);
@@ -260,6 +287,9 @@
             
           }
         }
+
+        removeActiveAllSections();
+
         switch (section) {
           case "events":
             toggleElementClass(eventsNav, customClasses.active, 1);
@@ -268,6 +298,7 @@
               customClasses.active,
               1
             );
+            toggleElementClass(eventsSection, customClasses.active, 1);
             if(burgerOpen) {
               toggleElementClass(eventsNav, customClasses.hidden, 0);
             }
