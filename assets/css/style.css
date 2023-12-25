@@ -205,13 +205,16 @@ section {
 /************************* HOME SECTION *************************/
 
 .container-ep-art {
-  margin-top: 6vh;
+  position: relative;
+  margin-top: 16vh;
 }
 .container-ep-art a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 15px;
   display: block;
-  margin: auto;
-  margin-top: 10vh;
   max-width: 130px;
   height: auto;
   box-shadow: 0 0 10px rgba(244, 243, 242, 0.8);
@@ -243,27 +246,42 @@ section {
   position: relative;
   padding-left: 5px;
   height: 25%;
-  background: white;
+  color: var(--color--yellow);
   border-radius: 6px;
   margin-bottom: 9px;
   background-color: rgba(167, 95, 214, 0.2);
 }
 .event-item button {
-  float: right;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  padding: 2px;
+  background-color: var(--color--purple-bold);
+  color: var(--color--yellow);
+  border-radius: 6px;
+  border-color: var(--color--purple-dark);
+  user-select: none;
+  font-size: 12px;
+}
+.event-item button:active {
+  padding-right: 0;
+  padding-top: 5px;
 }
 .event-location {
-  position: absolute;
+  display: inline-block;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
+  background-color: var(--color--green);
   width: 20%;
   height: 90%;
   border-radius: 6px;
-  display: block;
+  display: inline-block;
   text-align: center;
-  margin: 0 auto;
   padding: 10px;
+  margin: 0;
 }
 .event-location div{
   position: absolute;
@@ -275,7 +293,39 @@ section {
   text-transform: uppercase;
 }
 .event-details {
-  display: inline-block;
+  width: 80%;
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  float: right;
+}
+.event-details p {
+  padding-left: 8px;
+  top: 12%;
+  position: relative;
+  text-align: left;
+  line-height: 1.7;
+  color: var(--color--purple-light);
+  text-shadow: 0 0 1px var(--color--yellow);
+  font-size: 14px;
+}
+.event-details a {
+  position: relative;
+  color: var(--color--yellow);
+}
+.event-details span {
+  color: var(--color--yellow);
+}
+.event-details a::after {
+  position: absolute;
+  left: 140px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f104";
+  color: var(--color--yellow);
+  animation: pointAnimation ease 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 /************************* ABOUT SECTION *************************/
