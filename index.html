@@ -92,7 +92,7 @@
             When: <span>12/07/24</span> - Doors at <span>20:00</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
       <div class="event-item">
         <div class="event-location">
@@ -104,7 +104,7 @@
             When: <span>14/07/24</span> - Doors at <span>19:00</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
       <div class="event-item">
         <div class="event-location">
@@ -112,11 +112,11 @@
         </div>
         <div class="event-details">
           <p>
-            Where: <a href="https://bushhallmusic.co.uk/" target="_blank" aria-label="Bush Hall's website, opens in new tab.">Bush Hall</a><br>
-            When: <span>12/07/24</span> - Doors at <span>20:00</span>
+            Where: <a href="https://www.the100club.co.uk/" target="_blank" aria-label="The 100 Club's website, opens in new tab.">The 100 Club</a><br>
+            When: <span>17/07/24</span> - Doors at <span>20:30</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
       <div class="event-item">
         <div class="event-location">
@@ -124,11 +124,11 @@
         </div>
         <div class="event-details">
           <p>
-            Where: <a href="https://bushhallmusic.co.uk/" target="_blank" aria-label="Bush Hall's website, opens in new tab.">Bush Hall</a><br>
-            When: <span>12/07/24</span> - Doors at <span>20:00</span>
+            Where: <a href="https://www.bridgewater-hall.co.uk/" target="_blank" aria-label="Bridgewater Hall's website, opens in new tab.">Bridgewater Hall</a><br>
+            When: <span>28/07/24</span> - Doors at <span>19:30</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
       <div class="event-item">
         <div class="event-location">
@@ -136,11 +136,11 @@
         </div>
         <div class="event-details">
           <p>
-            Where: <a href="https://bushhallmusic.co.uk/" target="_blank" aria-label="Bush Hall's website, opens in new tab.">Bush Hall</a><br>
-            When: <span>12/07/24</span> - Doors at <span>20:00</span>
+            Where: <a href="https://www.thisisgorilla.com/" target="_blank" aria-label="Gorilla's website, opens in new tab.">Gorilla</a><br>
+            When: <span>04/08/24</span> - Doors at <span>20:00</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
       <div class="event-item">
         <div class="event-location">
@@ -148,11 +148,11 @@
         </div>
         <div class="event-details">
           <p>
-            Where: <a href="https://bushhallmusic.co.uk/" target="_blank" aria-label="Bush Hall's website, opens in new tab.">Bush Hall</a><br>
-            When: <span>12/07/24</span> - Doors at <span>20:00</span>
+            Where: <a href="https://bandonthewall.org/" target="_blank" aria-label="Band on the Wall's website, opens in new tab.">Band on the Wall</a><br>
+            When: <span>08/08/24</span> - Doors at <span>21:00</span>
           </p>
         </div>
-        <button><strong><em>Tickets!</em></strong></button>
+        <button><strong><em><a href="https://ticketmaster.co.uk/" target="_blank" aria-label="Link to buy tickets at Ticketmaster.co.uk, opens in new tab.">Tickets!</a></em></strong></button>
       </div>
     </section>
     <section class="about" id="section-about"></section>
@@ -320,6 +320,7 @@
       }
 
       function removeActiveAllSections(){
+        let scroll = 0;
         toggleElementClass(eventsSection, customClasses.active, 0);
         toggleElementClass(gallerySection, customClasses.active, 0);
         toggleElementClass(aboutSection, customClasses.active, 0);

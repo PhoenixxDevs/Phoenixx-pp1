@@ -171,6 +171,9 @@ section {
   margin-right: 15px;
   width: 90px;
 }
+.nav.fade-in.active {
+  background-color: rgba(97, 75, 113, 0.812);
+}
 .burger {
   z-index: 100;
   position: absolute;
@@ -322,6 +325,17 @@ section {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f104";
+  color: var(--color--yellow);
+  animation: pointAnimation ease 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.event-item button::before {
+  position: absolute;
+  right: 60px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
   color: var(--color--yellow);
   animation: pointAnimation ease 10s;
   animation-iteration-count: infinite;
