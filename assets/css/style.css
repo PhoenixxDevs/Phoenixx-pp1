@@ -364,15 +364,21 @@ section {
   border-radius: 8px;
   float: left;
   max-width: 50%;
+  min-width: 50%;
+  box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.7);
 }
-.alt-side {
+#about-influences-img {
   float: right;
+}
+#influences-title {
+  top: 50%; left: 50%;
+  transform: translate(-105%,-65%);
 }
 .about div h3 {
   font-size: 48px;
   font-family: "Qwitcher Grypen", sans-serif;
-  color: var(--color--yellow);
   text-align: center;
+  color: var(--color--yellow);
 }
 .about-content-title {
   position: absolute;
@@ -380,10 +386,26 @@ section {
   transform: translateY(-50%);
   width: 50%;
 }
-.about-content {
+.about-content-header {
   position: relative;
   display: inline-block;
+  margin-bottom: 10px;
+}
+.about-content {
+  display: inline-block;
   width: 100%;
+}
+.about-content p {
+  margin-bottom: 33px;
+  font-family: "Glory", sans-serif;
+  color: var(--color--yellow);
+  line-height: 1.3;
+  text-shadow: 4px 5px 5px rgba(0, 0, 0, 0.8);
+}
+.about-content p a {
+  font-size: 22px;
+  color: var(--color--purple-bold);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.78);
 }
 
 /************************* GALLERY SECTION *************************/
