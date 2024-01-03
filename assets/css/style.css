@@ -231,6 +231,7 @@ section {
 /************************* EVENTS SECTION *************************/
 
 .events {
+  font-family: "Glory", sans-serif;
   display: none;
   border-radius: 6px;
   overflow-y: scroll;
@@ -346,18 +347,79 @@ section {
 
 .about {
   display: none;
+  border-radius: 6px;
+  overflow-y: scroll;
+}
+.about.active {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 90%;
+  margin-left: 5%;
+  height: 75%;
+  padding: 10px;
+}
+.about div img {
+  border-radius: 8px;
+  float: left;
+  max-width: 50%;
+}
+.alt-side {
+  float: right;
+}
+.about div h3 {
+  font-size: 48px;
+  font-family: "Qwitcher Grypen", sans-serif;
+  color: var(--color--yellow);
+  text-align: center;
+}
+.about-content-title {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+.about-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 /************************* GALLERY SECTION *************************/
 
 .gallery {
   display: none;
+  border-radius: 6px;
+  overflow-y: scroll;
+}
+.gallery.active {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  margin-left: 5%;
+  width: 90%;
+  height: 75%;
+  padding: 10px;
 }
 
 /************************* CONNECT SECTION *************************/
 
 .connect {
   display: none;
+  border-radius: 6px;
+  overflow-y: scroll;
+}
+.connect.active {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  margin-left: 5%;
+  width: 90%;
+  height: 75%;
+  padding: 10px;
 }
 
 /************************* SECTION CHANGES **********************/
