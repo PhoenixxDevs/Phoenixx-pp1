@@ -273,7 +273,17 @@
           </div>
         </div>
         <p>
-          Independent songwriter, producer and rapper. Usually presented in a jazz-funk hip hop style, eccentric flows and unexpected lyrics are the essence of the Phoenixx music experience. <br> Listening to a Phoenixx instrumental you will find unusual sample manipulation, atmospheric sound design and unconventional section changes, all brought together by drum beats that make your head nod. <br> As a drummer in the band <a href="https://www.instagram.com/finding_gaz/">Finding Gaz</a>, he provides a funky breakbeat style of drumming that drives the bands syncopated and quirky rhythms.
+          Independent songwriter, producer and rapper. Usually presented in a
+          jazz-funk hip hop style, eccentric flows and unexpected lyrics are the
+          essence of the Phoenixx music experience. <br />
+          Listening to a Phoenixx instrumental you will find unusual sample
+          manipulation, atmospheric sound design and unconventional section
+          changes, all brought together by drum beats that make your head nod.
+          <br />
+          As a drummer in the band
+          <a href="https://www.instagram.com/finding_gaz/">Finding Gaz</a>, he
+          provides a funky breakbeat style of drumming that drives the bands
+          syncopated and quirky rhythms.
         </p>
       </div>
       <div class="influences about-content">
@@ -288,8 +298,13 @@
           </div>
         </div>
         <p>
-          Phoenixx's slightly odd hip hop style is heavily influenced by artists such as Gorillaz, MF DOOM and Del the Funky Homosapien to name just a few. However his rhythmical and melodical delivery is more akin to artists such as Mac Miller, Mick Jenkins, JID and Ocean Wisdom. <br>
-          Musical muses that inspire his songwriting thought process include the likes of Jamiroquai, Thundercat, Anderson .Paak, Vulfpeck and The Mouse Outfit.
+          Phoenixx's slightly odd hip hop style is heavily influenced by artists
+          such as Gorillaz, MF DOOM and Del the Funky Homosapien to name just a
+          few. However his rhythmical and melodical delivery is more akin to
+          artists such as Mac Miller, Mick Jenkins, JID and Ocean Wisdom. <br />
+          Musical muses that inspire his songwriting thought process include the
+          likes of Jamiroquai, Thundercat, Anderson .Paak, Vulfpeck and The
+          Mouse Outfit.
         </p>
       </div>
       <div class="interests about-content">
@@ -304,14 +319,34 @@
           </div>
         </div>
         <p>
-          Although music is a big part of Phoenixx's life, it isn't (always) everything. <br>
-          During downtime Phoenixx enjoys playing video games (Rocket League, Lethal Company, Satisfactory + waaaay more). <br>
-          He also enjoys writing code. Mainly proficient in HTML, CSS and JavaScript, using them to make primitive games and other whacky tools, he also has some familiarity with C (pp and #), Python and Kotlin.
+          Although music is a big part of Phoenixx's life, it isn't (always)
+          everything. <br />
+          During downtime Phoenixx enjoys playing video games (Rocket League,
+          Lethal Company, Satisfactory + waaaay more). <br />
+          He also enjoys writing code. Mainly proficient in HTML, CSS and
+          JavaScript, using them to make primitive games and other whacky tools,
+          he also has some familiarity with C (pp and #), Python and Kotlin.
         </p>
       </div>
     </section>
     <section class="gallery" id="section-gallery"></section>
-    <section class="connect" id="section-connect"></section>
+    <section class="connect" id="section-connect">
+      <h2 id="connect-title">Want to Get in Touch?</h2>
+      <ul class="inquirer">
+        <li>
+          <input type="radio" name="inquirer" id="artist" required/>
+        </li>
+        <li>
+          <input type="radio" name="inquirer" id="agent" />
+        </li>
+        <li>
+          <input type="radio" name="inquirer" id="fan" />
+        </li>
+      </ul>
+      <input type="email" placeholder="Email Address" id="inquiry-email"/>
+      <input placeholder="Type your message here:" id="inquiry-message">
+      <input type="submit" value="Connect!" id="submit"/>
+    </section>
     <footer>
       <img
         id="sitback"
@@ -393,6 +428,10 @@
 
       let navClone;
       let burgerOpen = false;
+
+      function scrollToTop(element) {
+        element.scrollTop = 0;
+      }
 
       function toggleSocials(state) {
         // Cycle through all elements in social link list and set display none
@@ -518,6 +557,7 @@
             if (burgerOpen) {
               toggleElementClass(eventsNav, customClasses.hidden, 0);
             }
+            scrollToTop(eventsSection);
             break;
           case "about":
             toggleElementClass(aboutNav, customClasses.active, 1);
@@ -530,6 +570,7 @@
             if (burgerOpen) {
               toggleElementClass(aboutNav, customClasses.hidden, 0);
             }
+            scrollToTop(aboutSection);
             break;
           case "connect":
             toggleElementClass(connectNav, customClasses.active, 1);
@@ -542,6 +583,7 @@
             if (burgerOpen) {
               toggleElementClass(connectNav, customClasses.hidden, 0);
             }
+            scrollToTop(connectSection);
             break;
           case "gallery":
             toggleElementClass(galleryNav, customClasses.active, 1);
@@ -554,6 +596,7 @@
             if (burgerOpen) {
               toggleElementClass(galleryNav, customClasses.hidden, 0);
             }
+            scrollToTop(gallerySection);
             break;
           case "home":
             break;
