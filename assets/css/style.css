@@ -428,6 +428,36 @@ section {
   padding: 10px;
 }
 
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  border-radius: 8px;
+  max-width: 90%;
+  margin-top: 8px;
+  margin-left: 5%;
+}
+
+.img-nav {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  vertical-align: middle;
+  color: rgba(234, 226, 158, 0.8);
+  background:rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  border: 2px solid rgba(234, 226, 158, 0.7);
+  border-radius: 50%;
+  font-size: 18px;
+}
+#img-next {
+  right: 0;
+}
+
 /************************* CONNECT SECTION *************************/
 
 .connect {
