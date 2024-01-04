@@ -330,9 +330,9 @@
       </div>
     </section>
     <section class="gallery" id="section-gallery">
-      <div class="image-container">
-        <i class="fa-solid fa-chevron-left img-nav" id="img-prev"></i>
-        <i class="fa-solid fa-chevron-right img-nav" id="img-next"></i>
+      <div class="image-container" id="img-gallery">
+        <i class="fa-solid fa-chevron-left img-nav" id="img-prev" onclick="cycleImage(0)"></i>
+        <i class="fa-solid fa-chevron-right img-nav" id="img-next" onclick="cycleImage(1)"></i>
         <img src="assets/img/all-out.jpeg" alt="">
         <img src="assets/img/mic-artist.jpeg" alt="" class="hidden">
         <img src="assets/img/phoenixx-backcap.jpeg" alt="" class="hidden">
@@ -438,6 +438,7 @@
       const connectNav = navChildren[2];
       const galleryNav = navChildren[3];
       const socialElements = linksSocial.children[0].children;
+      const imgGallery = document.getElementById("img-gallery").querySelectorAll("img");
 
       const customClasses = {
         hidden: "hidden",
@@ -449,6 +450,33 @@
 
       let navClone;
       let burgerOpen = false;
+      let imgNum = 0;
+
+      function resetGallery(){
+        for(let i = 0; i < imgGallery.length; i++){
+          imgGallery[i].classList.add("hidden");
+        }
+        imgGallery[0].classList.remove("hidden");
+        imgNum = 0;
+      }
+
+      function cycleImage(direction){
+        imgGallery[imgNum].classList.add("hidden");
+        if(!direction){
+          imgNum --;
+          if(imgNum < 0){
+            imgNum = imgGallery.length - 1;
+          }
+          imgGallery[imgNum].classList.remove("hidden");
+        }
+        else {
+          imgNum ++;
+          if(imgNum < imgGallery.length - 1){
+            imgNum = 0;
+          }
+          imgGallery[imgNum].classList.remove("hidden");
+        }
+      }
 
       function scrollToTop(element) {
         element.scrollTop = 0;
@@ -618,6 +646,7 @@
               toggleElementClass(galleryNav, customClasses.hidden, 0);
             }
             scrollToTop(gallerySection);
+            resetGallery();
             break;
           case "home":
             break;
