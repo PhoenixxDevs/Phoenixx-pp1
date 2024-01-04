@@ -30,7 +30,7 @@
       >
         <h1>Phoenixx</h1>
       </div>
-      <div class="nav-container" id="nav-container">
+      <nav class="nav-container" id="nav-container">
         <ul class="nav fade-in">
           <il
             class="nav-element"
@@ -68,7 +68,7 @@
             class="nav-container-burger hidden"
           ></div>
         </div>
-      </div>
+      </nav>
     </header>
     <section class="home fade-in" id="section-home">
       <div class="container-ep-art">
@@ -281,7 +281,7 @@
           changes, all brought together by drum beats that make your head nod.
           <br />
           As a drummer in the band
-          <a href="https://www.instagram.com/finding_gaz/">Finding Gaz</a>, he
+          <a href="https://www.instagram.com/finding_gaz/" target="_blank" aria-label="The band Finding Gaz's Instagram page. Opens in new tab.">Finding Gaz</a>, he
           provides a funky breakbeat style of drumming that drives the bands
           syncopated and quirky rhythms.
         </p>
@@ -323,7 +323,7 @@
           everything. <br />
           During downtime Phoenixx enjoys playing video games (Rocket League,
           Lethal Company, Satisfactory + waaaay more). <br />
-          He also enjoys writing code. Mainly proficient in HTML, CSS and
+          He also enjoys writing <a href="https://github.com/PhoenixxDevs/" target="_blank" aria-label="Phoenixx's Github page. Opens in new tab.">code</a>. Mainly proficient in HTML, CSS and
           JavaScript, using them to make primitive games and other whacky tools,
           he also has some familiarity with C (pp and #), Python and Kotlin.
         </p>
@@ -332,20 +332,28 @@
     <section class="gallery" id="section-gallery"></section>
     <section class="connect" id="section-connect">
       <h2 id="connect-title">Want to Get in Touch?</h2>
-      <ul class="inquirer">
-        <li>
-          <input type="radio" name="inquirer" id="artist" required/>
-        </li>
-        <li>
-          <input type="radio" name="inquirer" id="agent" />
-        </li>
-        <li>
-          <input type="radio" name="inquirer" id="fan" />
-        </li>
-      </ul>
-      <input type="email" placeholder="Email Address" id="inquiry-email"/>
-      <input placeholder="Type your message here:" id="inquiry-message">
-      <input type="submit" value="Connect!" id="submit"/>
+      <div id="form">
+        <h4 id="radio-title">I am:</h4>
+        <ul id="inquiry-radio">
+          <li>
+            <input type="radio" name="inquirer" id="artist" required />
+            <label for="artist">An Artist/Collaborator</label>
+          </li>
+          <li>
+            <input type="radio" name="inquirer" id="agent" />
+            <label for="agent">A Booking Agent/Promoter</label>
+          </li>
+          <li>
+            <input type="radio" name="inquirer" id="fan" />
+            <label for="fan">A Fan</label>
+          </li>
+        </ul>
+        <label for="inquiry-email">My Email is:</label>
+        <input type="email" placeholder="Email Address" id="inquiry-email" />
+        <label for="inquiry-message">Message:</label>
+        <textarea placeholder="Type your message here:" id="inquiry-message"></textarea>
+        <button type="submit" value="Connect!" id="submit"><p id="button-text">Connect!</p></button>
+      </div>
     </section>
     <footer>
       <img

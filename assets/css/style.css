@@ -103,6 +103,7 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
 }
 .nav-container {
   text-align: center;
@@ -358,7 +359,8 @@ section {
   width: 90%;
   margin-left: 5%;
   height: 75%;
-  padding: 10px;
+  padding: 14px;
+  padding-top: 22px;
 }
 .about div img {
   border-radius: 8px;
@@ -394,13 +396,13 @@ section {
 .about-content {
   display: inline-block;
   width: 100%;
+  text-shadow: 3px 5px 3px rgba(0, 0, 0, 1);
 }
 .about-content p {
-  margin-bottom: 80px;
+  margin-bottom: 66px;
   font-family: "Glory", sans-serif;
   color: var(--color--yellow);
   line-height: 1.3;
-  text-shadow: 4px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .about-content p a {
   font-size: 22px;
@@ -444,6 +446,7 @@ section {
   padding: 10px;
 }
 .connect h2 {
+  margin-top: 3vh;
   color: var(--color--yellow);
   font-size: 28px;
   text-align: center;
@@ -451,6 +454,60 @@ section {
 }
 .connect ul {
   list-style-type: none;
+}
+
+#form {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  color: var(--color--yellow);
+  font-size: 20px;
+  font-family: "Glory", sans-serif;
+}
+#radio-title {
+  margin-top: 2.5vh;
+}
+#inquiry-radio {
+  margin: 15px 10px;
+  margin-bottom: 2.5vh;
+  font-size: 18px;
+}
+#inquiry-email {
+  margin-top: 1.5vh;
+  margin-bottom: 2.5vh;
+  width: 100%;
+}
+#inquiry-message {
+  margin-top: 1.5vh;
+  height: 60px;
+  width: 100%;
+}
+#submit {
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 1.5vh;
+  padding: 4px;
+  float: right;
+  background-color: var(--color--purple-bold);
+  color: var(--color--yellow);
+  border-top: 2px solid var(--color--purple-light);
+  border-left: 2px solid var(--color--purple-light);
+  border-bottom: 2px solid rgb(120, 0, 144);
+  border-right: 2px solid rgb(120, 0, 144);
+  transition: ease-in-out 0.1s;
+  user-select: none;
+}
+#submit:active {
+  border-bottom: 2px solid var(--color--purple-light);
+  border-right: 2px solid var(--color--purple-light);
+  border-top: 2px solid rgb(120, 0, 144);
+  border-left: 2px solid rgb(120, 0, 144);
+}
+#button-text:active {
+  transform: translate(1px, 1px);
+}
+#form label {
+  font-size: 16px;
 }
 
 /************************* SECTION CHANGES **********************/
