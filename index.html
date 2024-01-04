@@ -463,15 +463,16 @@
       function cycleImage(direction){
         imgGallery[imgNum].classList.add("hidden");
         if(!direction){
-          imgNum --;
+          imgNum -= 1;
+          console.log(imgNum);
           if(imgNum < 0){
             imgNum = imgGallery.length - 1;
           }
           imgGallery[imgNum].classList.remove("hidden");
         }
         else {
-          imgNum ++;
-          if(imgNum < imgGallery.length - 1){
+          imgNum += 1;
+          if(imgNum > imgGallery.length - 1){
             imgNum = 0;
           }
           imgGallery[imgNum].classList.remove("hidden");
