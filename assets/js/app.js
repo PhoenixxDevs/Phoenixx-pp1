@@ -6,11 +6,16 @@ let particles = [];
 let particlesLength = 0;
 let maxParticles = 0;
 
-function init() {
+function resize(){
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
   canvas.width = WIDTH;
   canvas.height = HEIGHT;
+}
+
+function init() {
+
+  resize();
 
   // Define particle amount using WIDTH and HEIGHT
   maxParticles = Math.floor((WIDTH * HEIGHT) / 4000);

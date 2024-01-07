@@ -328,7 +328,7 @@ section {
   font-weight: 900;
   content: "\f104";
   color: var(--color--yellow);
-  animation: pointAnimation ease 10s;
+  animation: pointAnimation ease 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
@@ -339,7 +339,7 @@ section {
   font-weight: 900;
   content: "\f105";
   color: var(--color--yellow);
-  animation: pointAnimation ease 10s;
+  animation: pointAnimation ease 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
@@ -493,6 +493,7 @@ section {
 }
 
 #form {
+  width: 100%;
   display: inline-block;
   position: relative;
   padding: 10px;
@@ -613,7 +614,7 @@ footer {
   font-weight: 900;
   content: "\f105";
   color: var(--color--yellow);
-  animation: pointAnimation ease 10s;
+  animation: pointAnimation ease 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
@@ -625,7 +626,7 @@ footer {
   font-weight: 900;
   content: "\f107";
   color: var(--color--yellow);
-  animation: pointAnimation ease 10s;
+  animation: pointAnimation ease 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
 }
@@ -697,4 +698,31 @@ footer {
   100% {
     display: none;
   }
+}
+
+/************************* MEDIA QUERIES *************************/
+
+@media screen and (min-width: 600px){
+  /* Tablet and above */
+  
+  /* HOME */
+  .title-main h1 {
+    font-size: 120px;
+  }
+  .nav-container {
+    font-size: 42px;
+  }
+
+  .links-social {
+    font-size: 36px;
+  }
+  .image-container img {
+
+  }
+}
+
+@media screen and (min-width: 900px){
+}
+
+@media screen and (min-width: 1200px){
 }
