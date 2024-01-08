@@ -129,6 +129,9 @@ section {
   box-shadow: 0 0 17px rgba(97, 75, 113, 0.569);
   user-select: none;
 }
+.nav li{
+  display: inline-block;
+}
 .nav-element li{
   z-index: 2;
   display: inline-block;

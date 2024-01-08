@@ -11,6 +11,8 @@ function resize(){
   HEIGHT = window.innerHeight;
   canvas.width = WIDTH;
   canvas.height = HEIGHT;
+
+  console.log(WIDTH, HEIGHT, "WIDTH and HEIGHT", window.innerWidth, window.innerHeight, "innerWidth and innerHeight");
 }
 
 function init() {
@@ -29,6 +31,10 @@ function init() {
 }
 
 function animate() {
+  if(WIDTH != window.innerWidth || HEIGHT != window.innerHeight) {
+    init();
+  }
+
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   
   //this handles recycling of particles or removing if density is too high
@@ -125,4 +131,3 @@ function removeParticle() {
 ////////////////////////////////////// EVENT LISTENERS
 
 window.addEventListener("DOMContentLoaded", init);
-window.addEventListener("resize", init);
