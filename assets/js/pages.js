@@ -9,6 +9,8 @@ const linksSocial = document.getElementById("links-social");
 const burger = document.getElementById("burger");
 const burgerNav = document.getElementById("nav-container-burger");
 const navContainer = document.getElementById("nav-container");
+const form = document.getElementById("form");
+const submitConfirmation = document.getElementById("submit-confirmation");
 const navChildren = navContainer.children[0].children;
 const eventsNav = navChildren[0];
 const aboutNav = navChildren[1];
@@ -239,3 +241,14 @@ function handleSectionChange(section) {
     handleBurger();
   }
 }
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  form.reset();
+  submitConfirmation.classList.remove('hidden');
+  setTimeout(function() {submitConfirmation.style.opacity = '0';}, 3000);
+  setTimeout(function() {
+    submitConfirmation.classList.add('hidden');
+    submitConfirmation.style.opacity = '1';
+  }, 6000);
+});

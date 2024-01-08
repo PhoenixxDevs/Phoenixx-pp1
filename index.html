@@ -334,7 +334,7 @@
     <!-- CONNECT SECTION -->
     <section class="connect" id="section-connect">
       <h2 id="connect-title">Want to Get in Touch?</h2>
-      <form id="form">
+      <form id="form" onsubmit="return false">
         <h4 id="radio-title">I am:</h4>
         <ul id="inquiry-radio">
           <li>
@@ -354,8 +354,9 @@
         <input type="email" placeholder="Email Address" id="inquiry-email" />
         <label for="inquiry-message">Message:</label>
         <textarea placeholder="Type your message here:" id="inquiry-message"></textarea>
-        <button type="submit" value="Connect!" id="submit"><p id="button-text">Connect!</p></button>
+        <button type="submit" id="submit">Connect!</button>
       </form>
+      <div id="submit-confirmation" class="hidden">Message Sent!</div>
     </section>
     <footer>
       <img
