@@ -442,7 +442,8 @@ nav li {
   height: 100%;
 }
 
-.image-container img {
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.image-container img { 
   z-index: -2;
   position: absolute;
   top: 50%;
@@ -781,6 +782,29 @@ footer {
   }
   #form label {
     font-size: 20px;
+  }
+
+  /* GALLERY */
+  .gallery.active {
+    display: flex;
+    white-space: nowrap;
+    padding: 20px;
+  }
+  #img-gallery img {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(20%,5%);
+    padding-right: 20%;
+    max-width: 90%;
+    max-height: 80%;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  #section-gallery {
+
   }
   
   /* Check to see if space for blockquote */

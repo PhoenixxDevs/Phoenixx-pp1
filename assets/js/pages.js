@@ -45,7 +45,6 @@ function cycleImage(direction) {
   imgGallery[imgNum].classList.add("hidden");
   if (!direction) {
     imgNum -= 1;
-    console.log(imgNum);
     if (imgNum < 0) {
       imgNum = imgGallery.length - 1;
     }
