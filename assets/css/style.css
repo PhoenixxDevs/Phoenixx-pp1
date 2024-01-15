@@ -727,23 +727,6 @@ footer {
 }
 
 /************************* MEDIA QUERIES *************************/
-@media screen and (max-height: 400px) {
-  .title-main h1 {
-    font-size: 60px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .nav-container {
-    font-size: 28px;
-  }
-  .nav {
-    padding: 6px;
-  }
-  .container-ep-art a img {
-    margin-top: 5px;
-    max-width: 110px;
-  }
-}
 
 @media screen and (min-width: 600px) {
   /* Tablet and above */
@@ -755,7 +738,6 @@ footer {
   .nav-container {
     font-size: 42px;
   }
-
   .links-social {
     font-size: 36px;
   }
@@ -805,62 +787,64 @@ footer {
   }
 
   /* GALLERY */
-  .gallery.active {
-    display: flex;
-    white-space: nowrap;
-    padding: 20px;
-  }
-  .image-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-  }
-  .image-container img {
-    margin: 0;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .gallery-container:nth-child(1)::before {
-    content: "\f061";
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 50px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: var(--color--yellow);
-    animation: pointAnimation ease 4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-  }
-  .gallery-container:nth-child(1)::after {
-    content: "\f061";
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    font-size: 50px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: var(--color--yellow);
-    animation: pointAnimation ease 4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-  }
-  #section-gallery div i {
-    display: none;
-  }
-  #img-gallery {
-    overflow-x: scroll;
-    overflow-y: hidden;
+  /* Nested media query to ensure landscape viewing on mobile is presented as a click through instead of scrolling */
+  @media screen and (min-height: 500px) {
+    .gallery.active {
+      display: flex;
+      white-space: nowrap;
+      padding: 20px;
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    .image-container img {
+      margin: 0;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .gallery-container:nth-child(1)::before {
+      content: "\f061";
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      font-size: 50px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: var(--color--yellow);
+      animation: pointAnimation ease 4s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    .gallery-container:nth-child(1)::after {
+      content: "\f061";
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
+      font-size: 50px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: var(--color--yellow);
+      animation: pointAnimation ease 4s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    #section-gallery div i {
+      display: none;
+    }
+    #img-gallery {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
   }
 
-  /* Check to see if space for blockquote */
+  /* Check to see if space for blockquote on home section and recalibrate sizes */
   @media screen and (min-height: 700px) {
-    /* HOME SECTION */
     #ep-review {
       line-height: 1.1;
       display: block;
@@ -887,7 +871,72 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+  .title-responsive h1 {
+    height: 100px;
+    padding-top: 10px;
+    font-size: 90px;
+  }
+  .nav-responsive {
+    height: 80px;
+  }
+  .nav-element.active {
+    top: 53px;
+    font-size: 30px;
+  }
+  .bar {
+    width: 49px;
+    height: 6px;
+    margin: 13px 0;
+  }
+  .nav-container-burger ul {
+    margin-top: 53px;
+  }
+  .open-menu.bar-2 {
+    width: 36px;
+    transform: translate(-4px, 7px) rotateZ(50deg);
+  }
+  .open-menu.bar-3 {
+    width: 36px;
+    transform: translate(18px, -12px) rotateZ(-50deg);
+  }
 }
 
 @media screen and (min-width: 1200px) {
+}
+
+/* LANDSCAPE MOBILE FIXES */
+@media screen and (max-height: 400px) {
+  header {
+    z-index: 20;
+  }
+  footer {
+    z-index: 0;
+  }
+  section.active {
+    height: 65% !important;
+  }
+  .title-main h1 {
+    font-size: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .title-responsive h1 {
+    font-size: 50px;
+  }
+  .nav-container {
+    font-size: 24px;
+  }
+  .nav {
+    padding: 6px;
+  }
+  .container-ep-art a img {
+    margin-top: 15px;
+    max-width: 110px;
+  }
+  .img-nav {
+    top: 40%;
+  }
+  .event-item {
+    height: 55%;
+  }
 }

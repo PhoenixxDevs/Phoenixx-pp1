@@ -54,7 +54,7 @@ const ctx = canvas.getContext("2d");
 class Particle {
   constructor() {
     //size based on size of screen
-    this.size = Math.floor(Math.random() * maxParticles) / 200 + 0.5;
+    this.size = Math.floor(Math.random() * maxParticles) / 180 + 1;
     this.pos = {
       //set position to random place on screen
       x: Math.floor(Math.random() * WIDTH),
