@@ -17,9 +17,8 @@ const aboutNav = navChildren[1];
 const connectNav = navChildren[2];
 const galleryNav = navChildren[3];
 const socialElements = linksSocial.children[0].children;
-const imgGallery = document
-  .getElementById("img-gallery")
-  .querySelectorAll("img");
+const imgScrollContainer = document.getElementById("img-gallery");
+const imgGallery = imgScrollContainer.querySelectorAll("img");
 
 const customClasses = {
   hidden: "hidden",
@@ -241,13 +240,23 @@ function handleSectionChange(section) {
   }
 }
 
-form.addEventListener('submit', function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   form.reset();
-  submitConfirmation.classList.remove('hidden');
-  setTimeout(function() {submitConfirmation.style.opacity = '0';}, 3000);
-  setTimeout(function() {
-    submitConfirmation.classList.add('hidden');
-    submitConfirmation.style.opacity = '1';
+  submitConfirmation.classList.remove("hidden");
+  setTimeout(function () {
+    submitConfirmation.style.opacity = "0";
+  }, 3000);
+  setTimeout(function () {
+    submitConfirmation.classList.add("hidden");
+    submitConfirmation.style.opacity = "1";
   }, 6000);
 });
+
+// handle up/down scrollwheel on the scroller, as most folks don't have horizontal scroll
+imgScrollContainer.addEventListener('wheel', (e) => {
+  e.preventDefault();  // stop scrolling in another direction
+  imgScrollContainer.scrollLeft += (e.deltaY + e.deltaX);
+}, 
+{passive: false}
+);
