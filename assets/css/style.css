@@ -456,7 +456,6 @@ nav li {
   max-height: 90%;
   margin-top: 8px;
 }
-
 .img-nav {
   text-align: center;
   width: 36px;
@@ -594,9 +593,10 @@ nav li {
 /************************* FOOTER *************************/
 
 #sitback {
+  z-index: 10;
   max-height: 110px;
   width: auto;
-  position: absolute;
+  position: fixed;
   bottom: 2px;
   left: 2px;
 }
@@ -727,6 +727,23 @@ footer {
 }
 
 /************************* MEDIA QUERIES *************************/
+@media screen and (max-height: 400px) {
+  .title-main h1 {
+    font-size: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .nav-container {
+    font-size: 28px;
+  }
+  .nav {
+    padding: 6px;
+  }
+  .container-ep-art a img {
+    margin-top: 5px;
+    max-width: 110px;
+  }
+}
 
 @media screen and (min-width: 600px) {
   /* Tablet and above */
@@ -743,6 +760,7 @@ footer {
     font-size: 36px;
   }
   .container-ep-art a img {
+    margin-top: 1vh;
     max-width: 168px;
   }
 
@@ -860,6 +878,10 @@ footer {
       font-size: 32px;
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
+    }
+    .container-ep-art a img {
+      margin-top: 5px;
+      max-width: 150px;
     }
   }
 }
