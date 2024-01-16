@@ -18,7 +18,7 @@ function init() {
   resize();
 
   // Define particle amount using WIDTH and HEIGHT
-  maxParticles = Math.floor((WIDTH * HEIGHT) / 4000);
+  maxParticles = Math.floor((WIDTH * HEIGHT) / 3500);
 
   if (!running) {
     generateParticles(maxParticles);
@@ -53,23 +53,26 @@ const ctx = canvas.getContext("2d");
 
 class Particle {
   constructor() {
-    //size based on size of screen
+    this.alpha = (Math.floor(Math.random() * 70) + 30) / 100;
+    //roughly 4% chance for particle to be bigger
     this.minSize;
     Math.round(Math.random() - 0.46) ? this.minSize = 7 : this.minSize = 1;
+    //size based on size of screen
     this.size = Math.floor(Math.random() * maxParticles) / 180 + this.minSize;
     this.pos = {
-      //set position to random place on screen
+      //set position to random place on X axis and offscreen on Y
       x: Math.floor(Math.random() * WIDTH),
-      y: Math.floor(Math.random() * HEIGHT),
+      y: HEIGHT + this.size * 3,
     };
     this.vel = {
       // velocity to random amount between -0.2 and 0.2, two decimal places for performance
-      x: Math.floor(Math.random() * 40) / 100 - 0.2,
-      y: Math.floor(Math.random() * 40) / 100 - 0.2,
+      x: Math.floor(Math.random() * 40) / 70 - 0.2,
+      y: -Math.floor(Math.random() * (40 * this.size * 2)) / 100,
     };
-    this.color = `rgba(245, 246, 247, ${
-      (Math.floor(Math.random() * 70) + 30) / 100
-    })`; // not-white but with random amount of transparency
+    //add vel to y value of stronger alpha values to avoid obfuscation of yellow text
+    if(this.alpha > 0.6){this.vel.y += 0.7;}
+    // color is not-white but with random amount of transparency
+    this.color = `rgba(243, 247, 252, ${this.alpha})`;
     this.remove = false;
   }
   draw() {
@@ -86,8 +89,7 @@ class Particle {
     if (
       this.pos.x < -this.size ||
       this.pos.x > WIDTH + this.size ||
-      this.pos.y < -this.size ||
-      this.pos.y > HEIGHT + this.size
+      this.pos.y < -this.size
     ) {
       this.remove = true;
     }
