@@ -255,9 +255,21 @@ form.addEventListener("submit", function (e) {
 });
 
 // handle up/down scrollwheel on the scroller, as most folks don't have horizontal scroll
-imgScrollContainer.addEventListener('wheel', (e) => {
-  e.preventDefault();  // stop scrolling in another direction
-  imgScrollContainer.scrollLeft += (e.deltaY + e.deltaX);
-  }, 
-{passive: false}
+imgScrollContainer.addEventListener(
+  "wheel",
+  (e) => {
+    console.log(e.deltaX, e.deltaY, imgScrollContainer.style.scrollSnapType);
+    e.preventDefault(); // stop scrolling in another direction
+    if(e.deltaY > 4 || e.deltaY < -4 || e.deltaX > 4 || e.deltaX < -4){
+      imgScrollContainer.style.scrollSnapType = "none";
+      imgScrollContainer.scrollLeft += e.deltaY;
+    }
+    else {e.deltaX = 0; e.deltaY = 0; imgScrollContainer.style.scrollSnapType = "x mandatory";}
+  },
+  { passive: false }
 );
+window.addEventListener('resize', function(){
+  document.querySelector("html").clientWidth >= 1024 ?
+  toggleElementClass(navContainer, customClasses.navResponsive, 0) : 
+  toggleElementClass(navContainer, customClasses.navResponsive, 1);
+});

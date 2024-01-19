@@ -377,14 +377,6 @@ nav li {
   min-width: 50%;
   box-shadow: 5px 7px 6px rgba(0, 0, 0, 0.7);
 }
-#about-influences-img {
-  float: right;
-}
-#influences-title {
-  top: 50%;
-  left: 50%;
-  transform: translate(-105%, -65%);
-}
 .about div h3 {
   font-size: 48px;
   font-family: "Qwitcher Grypen", sans-serif;
@@ -418,6 +410,27 @@ nav li {
   font-size: 22px;
   color: var(--color--purple-bold);
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.78);
+}
+#about-influences-img {
+  float: right;
+}
+#influences-title {
+  top: 50%;
+  left: 50%;
+  transform: translate(-105%, -65%);
+}
+#bio::after {
+  content: "\f063";
+  position: relative;
+  top: 80px;
+  right: 50px;
+  font-size: 50px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--color--yellow);
+  animation: pointAnimation ease 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 /************************* GALLERY SECTION *************************/
@@ -869,6 +882,12 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+  #nav-container {
+    z-index: 151;
+  }
+  .connect.active {
+    z-index: 150;
+  }
   .title-responsive h1 {
     height: 100px;
     padding-top: 10px;
@@ -903,9 +922,32 @@ footer {
   .image-container {
     scroll-snap-align: center;
   }
+  @media screen and (min-height: 825px) {
+  /* Move containers down to account for bigger "active page" title/label */
+  .about.active, .events.active, .gallery.active, .connect.active {
+    top: 120px;
+    height: 80%;
+  } 
+  .point-at::before {
+    right: 64px;
+  }
+  .point-at::after {
+    right: 14px;
+    bottom: 208px;
+  }
+  .links-social ul {
+    font-size: 42px;
+  }
+  #sitback {
+    max-height: 170px;
+  }
+  .copyright-info {
+    bottom: 10px;
+    font-size: 18px;
+  }}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
 
 }
 
