@@ -77,13 +77,45 @@ User Stories: 2, 3, 5, 7, 13, 16
 
 Throughout creating this website I have ensured that I switched my screen to greyscale. This has enabled me to keep my contrast interactions at a level which is accessible by mostly everybody as can be seen in the pictures below.
 <div>
+<img src="docs/bw-site/bw-home.png" style="max-width: 400px;">
 <img src="docs/bw-site/bw-about.png" style="max-width: 400px;">
 <img src="docs/bw-site/bw-events.png" style="max-width: 400px;">
 <img src="docs/bw-site/bw-connect.png" style="max-width: 400px;">
 <img src="docs/bw-site/bw-gallery.png" style="max-width: 400px;">
-<img src="docs/bw-site/bw-home.png" style="max-width: 400px;">
-<div/>
+</div>
+
 ---
+
+# Features
+
+## Home Section
+
+- Starting with the background, on "DOM Content Loaded" an amount of particles is calculated using the screen width and height (to ensure that smaller devices deal with less physics calculations), created and then animated each frame. The reason for choosing this as a background refers back to [User Stories](#user-stories) number 6 - specifically, showing an artistic style that doesn't distract from the main focus of the website. 
+- The main title and navigation are center, clear and obvious.
+- The colours I chose for the title are a gradient between the light purple and yellow from the color palette.
+  
+<img src="docs/features/home-full.png" style="max-width: 650px;">
+
+- Underneath the navigation is a clickable image link which opens Phoenixx's EP on Spotify in a new tab.
+- Next to the image is a segment of a review that shows the visitor exactly who Phoenixx is and what sort of music he makes.
+- The idea of the gentleman in the bottom corner of the left side of the screen is that he sits and looks at the content with you. This ideally would have been a drawing/picture of Phoenixx but I am still to get a usable picture and so this is a placeholder that I found online (link in [Resources](#resources)).
+- Copyright bottom-centre of the screen. As with the man, it stays concurrent throughout the entire site.
+- In the bottom right of the screen are some stylized social media links. To encourage the click I have also added animated chevrons that draw attention to the spotify link.
+
+
+<img src="docs/features/nav-glow.png" style="max-width: 650px;">
+
+- The navigation has a translucent purple background with purple writing over the top and so I decided to use a yellow text-shadow to highlight and help make the contrast more obvious.
+- Each item in the navigation bar glows yellow when hovered over.
+
+<div>
+<img src="docs/features/sc-player-in.png" style="max-width: 300px;">
+<img src="docs/features/sc-player-out.png" style="max-width: 300px;">
+</div>
+
+- The final feature of the home screen is an embedded Soundcloud player, for the desktop version, that can be revealed by the "listen" button. Just like the little man at the bottom this button is concurrent. The idea is that you explore Phoenixx's music as you explore the website and get to know the artist.
+
+
 
 
 # Resources

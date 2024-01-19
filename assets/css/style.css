@@ -1007,6 +1007,13 @@ footer {
     max-width: 20%;
     float: left;
   }
+  .event-details p {
+    font-size: 30px;
+  }
+  .event-item strong a {
+    font-size: 28px;
+    margin: 15px;
+  }
   #ep-review {
     display: block;
     position: relative;
