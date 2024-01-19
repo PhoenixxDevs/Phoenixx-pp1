@@ -268,7 +268,7 @@ form.addEventListener("submit", function (e) {
   }, 6000);
 });
 
-// handle up/down scrollwheel on the scroller, as most folks don't have horizontal scroll
+// handle up/down scrollwheel as horizontal, as most folks don't have horizontal scroll
 imgScrollContainer.addEventListener(
   "wheel",
   (e) => {
