@@ -31,7 +31,6 @@
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
 
     //this handles recycling of particles or removing if density is too high
-    removeParticle();
 
     updateParticles();
 
@@ -112,18 +111,17 @@
   function updateParticles() {
     for (let i = 0; i < particlesLength; i++) {
       particles[i].update();
+      reassignParticles(i);
     }
   }
 
-  function removeParticle() {
-    for (let i = 0; i < particlesLength; i++) {
+  function reassignParticles(i) {
       if (particles[i].remove) {
         if (particlesLength > maxParticles) {
           particles.splice(i, 1);
           particlesLength = particles.length;
         } else particles[i] = new Particle();
       }
-    }
   }
 
   ////////////////////////////////////// EVENT LISTENERS
