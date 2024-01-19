@@ -199,6 +199,9 @@ nav li {
   width: 16px;
   transform: translate(13px, 1px) rotateZ(-50deg);
 }
+#burger {
+  cursor: pointer;
+}
 
 /************************* HOME SECTION *************************/
 
