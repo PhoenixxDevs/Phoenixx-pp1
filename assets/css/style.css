@@ -947,8 +947,15 @@ footer {
   }}
 }
 
-@media screen and (min-width: 1000px) {
-
+@media screen and (min-width: 1024px) {
+  .active {
+    font-size: 34px;
+  }
+  .nav-container-burger ul {
+    margin-right: 21px;
+    width: 136px;
+    line-height: 1.6;
+  }
 }
 
 /* LANDSCAPE MOBILE FIXES */

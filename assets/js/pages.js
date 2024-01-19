@@ -32,6 +32,7 @@ let navClone;
 let burgerOpen = false;
 let imgNum = 0;
 let scrolling = false;
+let isSectionHome = true;
 
 function resetGallery() {
   for (let i = 0; i < imgGallery.length; i++) {
@@ -107,10 +108,9 @@ function pageReformat(section) {
     toggleElementClass(homeSection, customClasses.hidden, 1); //hide home section
     toggleElementClass(title, customClasses.titleResponsive, 1); // move phoenixx
     navContainer.appendChild(title); // move title to nav container
+    toggleElementClass(burger, "hidden", 0); // add burger menu
     if (window.innerWidth < 1024) {
-      // If tablet or below make burger menu
       toggleElementClass(navContainer, customClasses.navResponsive, 1);
-      toggleElementClass(burger, "hidden", 0);
       if (window.innerWidth < 768) {
         // If mobile or below hide socials
         toggleSocials(1);
@@ -125,9 +125,8 @@ function pageReformat(section) {
     toggleElementClass(title, customClasses.titleResponsive, 0); // move phoenixx
     header.appendChild(title); // move title to original position
     header.appendChild(navContainer); // move nav to original position
+    toggleElementClass(burger, "hidden", 1); // remove burger menu
     if (window.innerWidth < 1024) {
-      // If tablet or below remove burger menu
-      toggleElementClass(burger, "hidden", 1);
       toggleElementClass(navContainer, customClasses.navResponsive, 0);
       toggleElementClass(navContainer, customClasses.active, 0);
       if (window.innerWidth < 768) {
@@ -155,6 +154,7 @@ function setActiveSection(section) {
       toggleElementClass(navChildren[j], customClasses.active, 0);
       toggleElementClass(navChildren[j], customClasses.hidden, 0);
     }
+    isSectionHome = true;
   } else {
     for (let i = 0; i < navChildren.length; i++) {
       toggleElementClass(navChildren[i], customClasses.active, 0);
@@ -166,6 +166,7 @@ function setActiveSection(section) {
       }
       // makes nav item appear from burger
     }
+    isSectionHome = false;
   }
 
   removeActiveAllSections();
@@ -269,7 +270,11 @@ imgScrollContainer.addEventListener(
   { passive: false }
 );
 window.addEventListener('resize', function(){
-  document.querySelector("html").clientWidth >= 1024 ?
-  toggleElementClass(navContainer, customClasses.navResponsive, 0) : 
-  toggleElementClass(navContainer, customClasses.navResponsive, 1);
+  if(document.querySelector("html").clientWidth >= 1024){
+    toggleElementClass(navContainer, customClasses.navResponsive, 0);
+  }
+  else {
+    if(isSectionHome){return;}
+    toggleElementClass(navContainer, customClasses.navResponsive, 1);
+  }
 });
