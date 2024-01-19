@@ -76,7 +76,7 @@
           aria-label="Link to Some Album on Spotify. Opens in a new tab."
         >
           <img
-            src="assets/img/phoenixx-self-titled.png"
+            src="assets/img/phoenixx-self-titled.webp"
             alt="Album Artwork for Self Titled by Phoenixx"
           />
         </a>
@@ -258,8 +258,9 @@
         <div class="about-content-header">
           <img
             id="about-bio-img"
-            src="assets/img/phoenixx-cool.png"
+            src="assets/img/phoenixx-cool.webp"
             alt="Phoenixx in a parker coat with sunglasses on."
+            class="lazy-img"
           />
           <div class="about-content-title">
             <h3>Bio</h3>
@@ -287,8 +288,9 @@
         <div class="about-content-header">
           <img
             id="about-influences-img"
-            src="assets/img/singing.png"
+            src="assets/img/singing.webp"
             alt="Phoenixx with eyes closed singing into a microphone attached to a mic stand."
+            class="lazy-img"
           />
           <div class="about-content-title" id="influences-title">
             <h3>Influences</h3>
@@ -308,8 +310,9 @@
         <div class="about-content-header">
           <img
             id="about-interests-img"
-            src="assets/img/phoenixx-skate.jpeg"
+            src="assets/img/phoenixx-skate.webp"
             alt="Phoenixx in the air with a skateboard in rotation underneath his feet."
+            class="lazy-img"
           />
           <div class="about-content-title">
             <h3>Interests</h3>
@@ -349,57 +352,58 @@
         ></i>
         <div class="image-container">
           <img
-            src="assets/img/all-out.jpeg"
+            src="assets/img/all-out.webp"
             alt="Phoenixx shirtless holding a microphone in his hand."
-          />
-        </div>
+            class="lazy-img"
+            />
+          </div> 
         <div class="image-container">
           <img
-            src="assets/img/mic-artist.jpeg"
+            src="assets/img/mic-artist.webp"
             alt="Phoenixx rapping into a microphone under a big stage light."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-backcap.jpeg"
+            src="assets/img/phoenixx-backcap.webp"
             alt="Phoenixx with a snapback cap turned backwards on his head."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-in-purple.jpeg"
+            src="assets/img/phoenixx-in-purple.webp"
             alt="Phoenixx holding a microphone bathed in a purple stage light."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-nahda.jpeg"
+            src="assets/img/phoenixx-nahda.webp"
             alt="Phoenixx rapping into his mic, his hand blurred from motion."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-purple-heaven.jpeg"
+            src="assets/img/phoenixx-purple-heaven.webp"
             alt="Phoenixx singing into a microphone under puprle light."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-stage-guitar.jpeg"
+            src="assets/img/phoenixx-stage-guitar.webp"
             alt="Phoenixx looking down at his guitar as he plays."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-smile.png"
+            src="assets/img/phoenixx-smile.webp"
             alt="Phoenixx smiling at the camera."
-            class="hidden"
+            class="hidden lazy-img"
           />
         </div>
       </div>
@@ -424,10 +428,10 @@
           </li>
         </ul>
         <label for="inquiry-email">My Email is:</label>
-        <input type="email" placeholder="Email Address" id="inquiry-email" />
+        <input type="email" src="Email Address" id="inquiry-email" />
         <label for="inquiry-message">Message:</label>
         <textarea
-          placeholder="Type your message here:"
+          src="Type your message here:"
           id="inquiry-message"
         ></textarea>
         <button type="submit" id="submit">Connect!</button>
@@ -437,7 +441,7 @@
     <footer>
       <img
         id="sitback"
-        src="assets/img/sitback.png"
+        src="assets/img/sitback.webp"
         alt="A picture of a sat watching the stars"
       />
       <div class="copyright-info fade-in">
@@ -486,7 +490,7 @@
       </div>
     </footer>
     <canvas id="canvas"></canvas>
-    <script type="text/javascript" src="assets/js/pages.js"></script>
+    <script type="text/javascript" src="assets/js/pages.js" async></script>
     <script type="text/javascript" src="assets/js/app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/1e38aabce3.js"

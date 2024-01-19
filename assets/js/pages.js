@@ -31,6 +31,7 @@ const customClasses = {
 let navClone;
 let burgerOpen = false;
 let imgNum = 0;
+let scrolling = false;
 
 function resetGallery() {
   for (let i = 0; i < imgGallery.length; i++) {
@@ -257,6 +258,6 @@ form.addEventListener("submit", function (e) {
 imgScrollContainer.addEventListener('wheel', (e) => {
   e.preventDefault();  // stop scrolling in another direction
   imgScrollContainer.scrollLeft += (e.deltaY + e.deltaX);
-}, 
+  }, 
 {passive: false}
 );

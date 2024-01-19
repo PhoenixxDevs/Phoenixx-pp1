@@ -82,6 +82,7 @@ Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitt
 |Text Rotation in CSS|https://www.turing.com/kb/how-to-rotate-text-in-css|
 |Breakpoint Locations|https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/|
 |Horizontal Scroll in JS|https://dev.to/samthor/divert-vertical-scroll-to-the-side-3id0#:~:text=Vertical%20To%20Horizontal&text=We%20can%20actually%20redirect%20catch,we%20prevent%20real%20horizontal%20scrolling.|
+|Lazy Loading Images|https://web.dev/articles/lazy-loading-images|
 |[About Section](#about) Container Horizontal Scrolling|https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/|
 |[About Section](#about) Container Scroll Snapping|https://alvarotrigo.com/blog/css-snap-scroll-horizontally/|
 |[Home Section](#home) Responsive CSS Arrow|https://codepen.io/pamcy/pen/wQbEao?editors=1100|

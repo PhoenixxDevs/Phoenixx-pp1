@@ -443,8 +443,6 @@ nav li {
   width: 100%;
   height: 100%;
 }
-
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .gallery-container img {
   z-index: -2;
   position: absolute;
@@ -838,7 +836,7 @@ footer {
       display: none;
     }
     #img-gallery {
-      overflow-x: scroll;
+      overflow-x: auto;
       overflow-y: hidden;
     }
   }
@@ -899,10 +897,16 @@ footer {
     width: 36px;
     transform: translate(18px, -12px) rotateZ(-50deg);
   }
+  #img-gallery {
+    scroll-snap-type: x mandatory;
+  }
+  .image-container {
+    scroll-snap-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  
+
 }
 
 /* LANDSCAPE MOBILE FIXES */
