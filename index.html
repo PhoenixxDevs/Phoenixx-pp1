@@ -338,12 +338,14 @@
     <section class="gallery" id="section-gallery">
       <div class="gallery-container" id="img-gallery">
         <i
+          role="button"
           class="fa-solid fa-chevron-left img-nav"
           id="img-prev"
           onclick="cycleImage(0)"
           aria-label="Button to cycle gallery image to the left."
         ></i>
         <i
+          role="button"
           class="fa-solid fa-chevron-right img-nav"
           id="img-next"
           onclick="cycleImage(1)"
@@ -410,7 +412,7 @@
     <!-- CONNECT SECTION -->
     <section class="connect" id="section-connect">
       <h2 id="connect-title">Want to Get in Touch?</h2>
-      <form id="form" onsubmit="return false">
+      <form id="form" onsubmit="return false" name="form">
         <h4 id="radio-title">I am:</h4>
         <ul id="inquiry-radio">
           <li>
@@ -427,11 +429,12 @@
           </li>
         </ul>
         <label for="inquiry-email">My Email is:</label>
-        <input type="email" placeholder="Email address:" id="inquiry-email" >
+        <input type="email" placeholder="Email address:" id="inquiry-email" required>
         <label for="inquiry-message">Message:</label>
         <textarea
           placeholder="Type your message here:"
           id="inquiry-message"
+          required
         ></textarea>
         <button type="submit" id="submit">Connect!</button>
       </form>

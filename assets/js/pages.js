@@ -259,7 +259,6 @@ form.addEventListener("submit", function (e) {
 imgScrollContainer.addEventListener(
   "wheel",
   (e) => {
-    console.log(e.deltaX, e.deltaY, imgScrollContainer.style.scrollSnapType);
     e.preventDefault(); // stop scrolling in another direction
     if(e.deltaY > 4 || e.deltaY < -4 || e.deltaX > 4 || e.deltaX < -4){
       imgScrollContainer.style.scrollSnapType = "none";
