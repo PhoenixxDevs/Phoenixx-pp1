@@ -19,6 +19,7 @@ const galleryNav = navChildren[3];
 const socialElements = linksSocial.children[0].children;
 const imgScrollContainer = document.getElementById("img-gallery");
 const imgGallery = imgScrollContainer.querySelectorAll("img");
+const soundcloudPlayer = document.getElementById("soundcloud-player");
 
 const customClasses = {
   hidden: "hidden",
@@ -33,6 +34,18 @@ let burgerOpen = false;
 let imgNum = 0;
 let scrolling = false;
 let isSectionHome = true;
+let soundcloudPlayerDisplayed = false;
+
+function toggleSoundcloud() {
+  if(!soundcloudPlayerDisplayed){  
+    soundcloudPlayer.style.left = "120px"
+    soundcloudPlayerDisplayed = true;
+  }
+  else {
+    soundcloudPlayer.style.left = "-800px";
+    soundcloudPlayerDisplayed = false;
+  }
+}
 
 function resetGallery() {
   for (let i = 0; i < imgGallery.length; i++) {

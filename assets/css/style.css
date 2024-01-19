@@ -239,6 +239,44 @@ nav li {
   font-size: 22px;
   color: var(--color--yellow);
 }
+#soundcloud-player-toggle {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+  margin-left: 8px;
+  padding: 6px 8px;
+  border-radius: 14px;
+  font-size: 16px;
+  background-color: var(--color--purple-bold);
+  color: var(--color--yellow);
+  border-top: 2px solid var(--color--purple-light);
+  border-left: 2px solid var(--color--purple-light);
+  border-bottom: 2px solid rgb(120, 0, 144);
+  border-right: 2px solid rgb(120, 0, 144);
+  transition: ease-in-out 0.1s;
+  user-select: none;
+}
+#soundcloud-player-toggle:active {
+  border-bottom: 2px solid var(--color--purple-light);
+  border-right: 2px solid var(--color--purple-light);
+  border-top: 2px solid rgb(120, 0, 144);
+  border-left: 2px solid rgb(120, 0, 144);
+  padding-left: 9px;
+  padding-top: 7px;
+}
+#soundcloud-player {
+  position: absolute;
+  top: 50%;
+  left: -1000px;
+  transform: translateY(-50%);
+  transition: ease-in-out 1s;
+}
+#soundcloud-player iframe{
+border-radius: 14px;
+}
 /************************* EVENTS SECTION *************************/
 
 .events {
@@ -947,6 +985,9 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  #soundcloud-player-toggle {
+  display: inline-block;
+  }
   .active {
     font-size: 34px;
   }

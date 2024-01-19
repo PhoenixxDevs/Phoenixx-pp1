@@ -67,6 +67,9 @@ Mt Burleigh (Dark Off Green) - rgb(92, 122, 105)
 Citrino (Subtle Cream Highlighter) - rgb(234, 226, 158)
 
 ---
+
+
+
 # Resources
 ## Images
 Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
