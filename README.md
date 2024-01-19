@@ -1,10 +1,13 @@
 # Phoenixx Music
 ---
-# User Experience (UX)
 ## Initial Discussion
-Phoenixx Music is an artist website that is created to be a showcase of the artist's work and to provide information on who the artist is, upcoming shows and how to get in touch.
+Phoenixx Music is an artist website, created to be a showcase of the artist's work and style. In addition to looking exciting it aims to provide information on who the artist is, upcoming shows and how to get in touch.
 
-After recording his first EP and performing at multiple events, the artist needs a place to direct fans and promoters which will serve as a hub to direct visitors to what they are searching for.
+After recording his first EP and performing at multiple events, the artist needs a place to send fans and promoters which will serve as a hub to direct visitors to what they are searching for.
+![Phoenixx Mock Ups](docs/phoenixx-mockups.webp)
+
+---
+# User Experience (UX)
 ## Important Information to Include
 - Links to streaming platforms
 - Links to social media
@@ -24,50 +27,63 @@ After recording his first EP and performing at multiple events, the artist needs
 ### First Time Visitor Goals
 |Number|Goal|
 |--|--|
-|1.|As a first time visitor I want to find out who the artist is and what he does/what music he creates.<br>I know I am done when the website provides links to music and socials as well as an "About" page.|
-|2.|As a first time visitor I want to be able to navigate the site with ease.<br>I know I am done when the links between sections of the website are easily understandable and displayed well.|
-|3.|As a first time visitor I want to know about new events and see photos of past events.<br>I know I am done when there is information provided about new events and a gallery to see photos of past events.|
-|4.|As a first time visitor I want to I want to know where to listen to the artist's music.<br>I know I am done when the website showcases external links to Spotify and YouTube.|
-|5.|As a first time visitor I want to find links to social media so I can follow the artist. <br> I know I am done when the website directs visitors to social media links.|<br>
+|7.|As a first time visitor I want to find out who the artist is and what he does/what music he creates.<br>I know I am done when the website provides links to music and socials as well as an "About" page.|
+|8.|As a first time visitor I want to be able to navigate the site with ease.<br>I know I am done when the links between sections of the website are easily understandable and displayed well.|
+|9.|As a first time visitor I want to know about new events and see photos of past events.<br>I know I am done when there is information provided about new events and a gallery to see photos of past events.|
+|10.|As a first time visitor I want to I want to know where to listen to the artist's music.<br>I know I am done when the website showcases external links to Spotify and YouTube.|
+|11.|As a first time visitor I want to find links to social media so I can follow the artist. <br> I know I am done when the website directs visitors to social media links.|<br>
 ### Professional Visitor Goals
 |Number|Goal|
 |--|--|
-|1.|As a professional visitor I want current information about the artist's upcoming shows and new releases.<br>I know I am done when the website has a section that showcases upcoming events.|
-|2.|As a professional visitor I want to find out more about the artist and what music he makes.<br>I know I am done when the website provides links to music and socials as well as an "About" page.|
-|3.|As a professional visitor I want to easily be able to contact the artist about potential shows or collaborations.<br>I know I am done when the website provides a form for sending messages to the client/relevant channels.|<br>
+|12.|As a professional visitor I want current information about the artist's upcoming shows and new releases.<br>I know I am done when the website has a section that showcases upcoming events.|
+|13.|As a professional visitor I want to find out more about the artist and what music he makes.<br>I know I am done when the website provides links to music and socials as well as an "About" page.|
+|14.|As a professional visitor I want to easily be able to contact the artist about potential shows or collaborations.<br>I know I am done when the website provides a form for sending messages to the client/relevant channels.|<br>
 ### Fan Visitor Goals
 |Number|Goal|
 |--|--|
-|1.|As a visiting fan I want to be able to find social media links easily.<br>I know I am done when the site subtly directs visitors towards social media links.|
-|2.|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section.| <br>
+|15.|As a visiting fan I want to be able to find social media links easily.<br>I know I am done when the site subtly directs visitors towards social media links.|
+|16.|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section.| <br>
 ---
 # Design
 ## Wireframes
+Below I have provided the basic wireframes for the design of the website. I have also numbered each wireframe with the relevant User Story excluding number 1 as it applies to the entire website.
 ### Home
+User Stories: 2, 3, 6, 7, 8, 10, 11, 13, 15
 ![Home wireframe](docs/wireframes/home-wireframe.jpg)
 ### Events
+User Stories: 2, 9, 12, 16
 ![Events wireframe](docs/wireframes/events-wireframe.jpg)
 ### Gallery
+User Stories: 5, 7, 9
 ![Gallery wireframe](docs/wireframes/gallery-wireframe.jpg)
 ### About
+User Stories: 2, 3, 5, 7, 13, 16 
 ![About wireframe](docs/wireframes/about-wireframe.jpg)
 ### Connect
+2, 4, 14
 ![Connect wireframe](docs/wireframes/connect-wireframe.jpg)
 ## Colour Palette
 ![Colour Palette](./docs/colorpalette.png)
 
-French Violet (Bold Dark Purple) - rgb(140, 0, 204)
+1. French Violet (Bold Dark Purple) - rgb(140, 0, 204)
 
-Teldrassil Purple (Medium Pastel Purple) - rgb(167, 95, 214)
+2. Teldrassil Purple (Medium Pastel Purple) - rgb(167, 95, 214)
 
-Gengiana (Muddy Dark Purple) - rgb(97, 75, 113)
+3. Gengiana (Muddy Dark Purple) - rgb(97, 75, 113)
 
-Mt Burleigh (Dark Off Green) - rgb(92, 122, 105)
+4. Mt Burleigh (Dark Off Green) - rgb(92, 122, 105)
 
-Citrino (Subtle Cream Highlighter) - rgb(234, 226, 158)
+5. Citrino (Subtle Cream Highlighter) - rgb(234, 226, 158)
 
+Throughout creating this website I have ensured that I switched my screen to greyscale. This has enabled me to keep my contrast interactions at a level which is accessible by mostly everybody as can be seen in the pictures below.
+<div>
+<img src="docs/bw-site/bw-about.png" style="max-width: 400px;">
+<img src="docs/bw-site/bw-events.png" style="max-width: 400px;">
+<img src="docs/bw-site/bw-connect.png" style="max-width: 400px;">
+<img src="docs/bw-site/bw-gallery.png" style="max-width: 400px;">
+<img src="docs/bw-site/bw-home.png" style="max-width: 400px;">
+<div/>
 ---
-
 
 
 # Resources
