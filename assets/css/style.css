@@ -5,29 +5,19 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #060505;
   overflow: hidden;
 }
-
 canvas {
   z-index: -100;
   position: absolute;
   top: 0;
   left: 0;
 }
-
 a {
   text-decoration: none;
 }
-
-/* .container-body {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-} */
-
 section {
   top: 0;
   left: 0;
@@ -228,7 +218,6 @@ nav li {
 }
 #home-section {
   animation: fadeInAnimation ease 6s;
-  /* animation-delay: 1s; */
 }
 #ep-review {
   display: none;
@@ -275,7 +264,7 @@ nav li {
   transition: ease-in-out 1s;
 }
 #soundcloud-player iframe{
-border-radius: 14px;
+  border-radius: 14px;
 }
 /************************* EVENTS SECTION *************************/
 
@@ -488,7 +477,6 @@ border-radius: 14px;
   height: 75%;
   padding: 10px;
 }
-
 .gallery-container {
   position: relative;
   width: 100%;
@@ -707,17 +695,11 @@ footer {
 
 /************************* ANIMATIONS *************************/
 
-/* .fade-out{
-  animation: fadeOutAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-} */
 .fade-in {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -729,7 +711,6 @@ footer {
     opacity: 1;
   }
 }
-
 @keyframes fadeOutAnimation {
   0% {
     opacity: 1;
@@ -741,7 +722,6 @@ footer {
     opacity: 0;
   }
 }
-
 @keyframes pointAnimation {
   0% {
     opacity: 1;
@@ -763,14 +743,6 @@ footer {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes hideDelay {
-  0% {
-  }
-  100% {
-    display: none;
   }
 }
 

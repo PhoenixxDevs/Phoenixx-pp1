@@ -113,7 +113,6 @@
     for (let i = 0; i < particlesLength; i++) {
       particles[i].update();
     }
-    // console.log(WIDTH, "width", HEIGHT, "height");
   }
 
   function removeParticle() {

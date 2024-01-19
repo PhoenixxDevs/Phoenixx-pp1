@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="A website for the artist Phoenixx">
+    <meta mame="keywords" content="Music, Phoenixx, rap, hip hop, jazz, funk, artist">
     <title>Phoenixx</title>
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,600;0,700;1,700&family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Qwitcher+Grypen:wght@700&display=swap"
       rel="stylesheet"
-    />
+    >
   </head>
   <body>
     <header>
@@ -73,10 +76,8 @@
     </button>
     <div id="soundcloud-player">
       <iframe
-        width="100%"
-        height="300"
-        scrolling="no"
-        frameborder="no"
+        title="Phoenixx on Soundcloud player"
+        height="300px"
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/847683101&color=%23a320ba&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       ></iframe>
@@ -113,6 +114,7 @@
     </div>
     <!-- HOME SECTION -->
     <section class="home fade-in" id="section-home">
+      <h6 class="hidden">Home</h6>
       <div class="container-ep-art">
         <a
           href="https://open.spotify.com/album/5hILJsRqiJY2E9GlVoTGiO?si=d9d8e1b5c368496b"
@@ -120,9 +122,10 @@
           aria-label="Link to Some Album on Spotify. Opens in a new tab."
         >
           <img
-            src="assets/img/phoenixx-self-titled.webp"
-            alt="Album Artwork for Self Titled by Phoenixx"
-          />
+          class="lazyload"  
+          data-src="assets/img/phoenixx-self-titled.webp"
+          alt="Album Artwork for Self Titled by Phoenixx"
+          >
         </a>
       </div>
       <blockquote id="ep-review">
@@ -133,6 +136,7 @@
     </section>
     <!-- EVENTS SECTION -->
     <section class="events" id="section-events">
+      <h6 class="hidden">Events</h6>
       <div class="event-item">
         <div class="event-location">
           <div>Lon</div>
@@ -298,14 +302,15 @@
     </section>
     <!-- ABOUT SECTION -->
     <section class="about" id="section-about">
+      <h6 class="hidden">About</h6>
       <div class="bio about-content">
         <div class="about-content-header">
           <img
             id="about-bio-img"
-            src="assets/img/phoenixx-cool.webp"
+            class="lazyload"
+            data-src="assets/img/phoenixx-cool.webp"
             alt="Phoenixx in a parker coat with sunglasses on."
-            class="lazy-img"
-          />
+          >
           <div class="about-content-title">
             <h3 id="bio">Bio</h3>
           </div>
@@ -332,10 +337,10 @@
         <div class="about-content-header">
           <img
             id="about-influences-img"
-            src="assets/img/singing.webp"
+            class="lazyload"
+            data-src="assets/img/singing.webp"
             alt="Phoenixx with eyes closed singing into a microphone attached to a mic stand."
-            class="lazy-img"
-          />
+          >
           <div class="about-content-title" id="influences-title">
             <h3>Influences</h3>
           </div>
@@ -354,10 +359,10 @@
         <div class="about-content-header">
           <img
             id="about-interests-img"
-            src="assets/img/phoenixx-skate.webp"
+            class="lazyload"
+            data-src="assets/img/phoenixx-skate.webp"
             alt="Phoenixx in the air with a skateboard in rotation underneath his feet."
-            class="lazy-img"
-          />
+          >
           <div class="about-content-title">
             <h3>Interests</h3>
           </div>
@@ -381,6 +386,7 @@
     </section>
     <!-- GALLERY SECTION -->
     <section class="gallery" id="section-gallery">
+      <h6 class="hidden">Gallery</h6>
       <div class="gallery-container" id="img-gallery">
         <i
           role="button"
@@ -398,78 +404,87 @@
         ></i>
         <div class="image-container">
           <img
-            src="assets/img/all-out.webp"
+          class="lazyload"  
+          data-src="assets/img/all-out.webp"
             alt="Phoenixx shirtless holding a microphone in his hand."
-            class="lazy-img"
-          />
+            
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/mic-artist.webp"
+          class="lazyload"  
+          data-src="assets/img/mic-artist.webp"
             alt="Phoenixx rapping into a microphone under a big stage light."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-backcap.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-backcap.webp"
             alt="Phoenixx with a snapback cap turned backwards on his head."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-in-purple.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-in-purple.webp"
             alt="Phoenixx holding a microphone bathed in a purple stage light."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-nahda.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-nahda.webp"
             alt="Phoenixx rapping into his mic, his hand blurred from motion."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-purple-heaven.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-purple-heaven.webp"
             alt="Phoenixx singing into a microphone under puprle light."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-stage-guitar.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-stage-guitar.webp"
             alt="Phoenixx looking down at his guitar as he plays."
             class="hidden lazy-img"
-          />
+          >
         </div>
         <div class="image-container">
           <img
-            src="assets/img/phoenixx-smile.webp"
+          class="lazyload"  
+          data-src="assets/img/phoenixx-smile.webp"
             alt="Phoenixx smiling at the camera."
             class="hidden lazy-img"
-          />
+          >
         </div>
       </div>
     </section>
     <!-- CONNECT SECTION -->
     <section class="connect" id="section-connect">
+      <h6 class="hidden">Connect</h6>
       <h2 id="connect-title">Want to Get in Touch?</h2>
       <form id="form" onsubmit="return false" name="form">
         <h4 id="radio-title">I am:</h4>
         <ul id="inquiry-radio">
           <li>
-            <input type="radio" name="inquirer" id="artist" required />
+            <input type="radio" name="inquirer" id="artist" required>
             <label for="artist">An Artist/Collaborator</label>
           </li>
           <li>
-            <input type="radio" name="inquirer" id="agent" />
+            <input type="radio" name="inquirer" id="agent">
             <label for="agent">A Booking Agent/Promoter</label>
           </li>
           <li>
-            <input type="radio" name="inquirer" id="fan" />
+            <input type="radio" name="inquirer" id="fan">
             <label for="fan">A Fan</label>
           </li>
         </ul>
@@ -479,7 +494,7 @@
           placeholder="Email address:"
           id="inquiry-email"
           required
-        />
+        >
         <label for="inquiry-message">Message:</label>
         <textarea
           placeholder="Type your message here:"
@@ -493,9 +508,10 @@
     <footer>
       <img
         id="sitback"
-        src="assets/img/sitback.webp"
+        class="lazyload"
+        data-src="assets/img/sitback.webp"
         alt="A picture of a sat watching the stars"
-      />
+      >
       <div class="copyright-info fade-in">
         Copyright &#169; <br>
         Phoenixx 2023
@@ -542,6 +558,7 @@
       </div>
     </footer>
     <canvas id="canvas"></canvas>
+    <script src="assets/js/lazy.js" async></script>
     <script src="assets/js/pages.js" async></script>
     <script src="assets/js/app.js" defer></script>
     <script
