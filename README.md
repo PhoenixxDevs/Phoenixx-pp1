@@ -32,6 +32,10 @@
 - [Testing](#testing)
   - [Validators](#validators)
   - [Testing User Stories](#testing-user-stories)
+  - [Accessibility Testing](#accessibility-testing)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [Manual Testing](#manual-testing)
+      - [Browsers](#browsers)
 - [Resources](#resources)
   - [Utilities](#utilities)
 
@@ -115,15 +119,6 @@ User Stories: 2, 3, 5, 7, 13, 16
 4. Mt Burleigh (Dark Off Green) - rgb(92, 122, 105)
 
 5. Citrino (Subtle Cream Highlighter) - rgb(234, 226, 158)
-
-Throughout creating this website I have ensured that I switched my screen to greyscale. This has enabled me to keep my contrast interactions at a level which is accessible by mostly everybody as can be seen in the pictures below.
-<div>
-  <img src="docs/bw-site/bw-home.png" style="max-width: 400px;">
-  <img src="docs/bw-site/bw-about.png" style="max-width: 400px;">
-  <img src="docs/bw-site/bw-events.png" style="max-width: 400px;">
-  <img src="docs/bw-site/bw-connect.png" style="max-width: 400px;">
-  <img src="docs/bw-site/bw-gallery.png" style="max-width: 400px;">
-</div>
 
 ---
 
@@ -240,7 +235,7 @@ Throughout creating this website I have ensured that I switched my screen to gre
 |5.|**_Complete_**|As a client I want to showcase media on the website.<br>I know I am done when there is a functioning gallery section included on the website. <br> Evidence: There is a fully functioning [Gallery](#gallery-section) containing pictures of the artist.|
 |6.|**_Complete_**|As a client I want to stand out amongst others through creativity whilst not deterring/confusing visitors.<br>I know I am done when the site is both interesting visually but also fully functional, with each call to action being fully descriptive and meaningful.<br> Evidence: The website has a unique [background animation](#home-section) (item 1) and stylised features such as the [burger menu](#events) (item 5).|
 |7.|**_Complete_**|As a first time visitor I want to find out who the artist is and what he does/what music he creates.<br>I know I am done when the website provides links to music and socials as well as an "About" page. <br> Evidence: There is links to both [socials](#home-section) (item 8) and an [About section](#about).|
-|8.|**_Complete_**|As a first time visitor I want to be able to navigate the site with ease.<br>I know I am done when the links between sections of the website are easily understandable and displayed well.<br> Evidence: This is achieved in the [Home Section](#home-section)(item 2) and the [responsive navigation](#events-section)(item 4).|
+|8.|**_Complete_**|As a first time visitor I want to be able to navigate the site with ease.<br>I know I am done when the links between sections of the website are easily understandable and displayed well.<br> Evidence: This is achieved in the [Home Section](#home-section) (item 2) and the [responsive navigation](#events-section) (item 4).|
 |9.|**_Complete_**|As a first time visitor I want to know about new events and see photos of past events.<br>I know I am done when there is information provided about new events and a gallery to see photos of past events.<br> Evidence: There is both a fully functioning [Gallery](#gallery-section) and [Events section](#events-section).|
 |10.|**_Complete_**|As a first time visitor I want to I want to know where to listen to the artist's music.<br>I know I am done when the website showcases external links to Spotify and YouTube.<br> Evidence: There are [links](#home-section) (item 8) to Spotify and YouTube on most pages.|
 |11.|**_Complete_**|As a first time visitor I want to find links to social media so I can follow the artist. <br> I know I am done when the website directs visitors to social media links.<br> Evidence: There are [links](#home-section) (item 8) to social media like Facebook and Instagram|<br>
@@ -249,6 +244,49 @@ Throughout creating this website I have ensured that I switched my screen to gre
 |14.|**_Complete_**|As a professional visitor I want to easily be able to contact the artist about potential shows or collaborations.<br>I know I am done when the website provides a form for sending messages to the client/relevant channels.<br> The [Connect section](#connect-section) allows anybody to make an inquiry.|<br>
 |15.|**_Complete_**|As a visiting fan I want to be able to find social media links easily.<br>I know I am done when the site subtly directs visitors towards social media links.<br> Evidence: [Home Section](#home-section) (item 8) is the perfect example of drawing attention to links.|
 |16.|**_Complete_**|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section. <br>Evidence: The artist has a functioning [Events](#events-section) page that displays all of the relevant information.| <br>
+
+## Accessibility Testing
+
+### Lighthouse Testing
+
+To test the contrast of colours and readability of fonts I used the Lighthouse development tool in Chrome.
+  <img src="docs/testing/lighthouse.png" style="max-width: 400px;">
+
+In the performance metrics below it shows that a large majority of my performance issues stem from [Largest Contentful Paint](https://web.dev/articles/optimize-lcp#:~:text=Largest%20Contentful%20Paint%20(LCP)%20is,is%20rendered%20within%20the%20viewport.) which can be optimised further in the future by adding critical css inline or splitting styles required for first load into a document link with "preload", amongst other fixes. 
+
+  <img src="docs/testing/metrics.png" style="max-width: 400px;">
+
+The other metric that is holding back the load time of my page is [Blocking Time](https://web.dev/articles/tbt). This metric can make a website feel slow and unresponsive on initial page load due to the main thread receiving a high work load. This time can usually be reduced by splitting tasks up in to smaller segments allowing other actions to be completed between them or using web helpers to perform actions and return the results.
+
+  <img src="docs/testing/thread-block.png" style="max-width: 400px;">
+
+Lastly the one issue hindering the [Best Practices](https://www.thinkful.com/blog/web-development-best-practices/) score is within the code for the Soundcloud player embedded within the application.
+
+  <img src="docs/testing/best-practices.png" style="max-width: 400px;">
+
+### Manual Testing
+
+Throughout creating this website I have ensured that I switched my screen to greyscale. This has enabled me to keep my contrast interactions at a level which is accessible by mostly everybody as can be seen in the pictures below.
+<div>
+  <img src="docs/testing/bw-home.png" style="max-width: 400px;">
+  <img src="docs/testing/bw-about.png" style="max-width: 400px;">
+  <img src="docs/testing/bw-events.png" style="max-width: 400px;">
+  <img src="docs/testing/bw-connect.png" style="max-width: 400px;">
+  <img src="docs/testing/bw-gallery.png" style="max-width: 400px;">
+</div>
+
+- I have tested the web application on different browsers and different devices ensuring that funcionality is not hindered.
+- All links direct the user to the intended target.
+- Fonts are clear and readable and colours contrast in a way which is manageable and easy to differentiate.
+
+#### Browsers
+
+**Note - The high contrast in some screenshots is due to hardware incompatibilities between my PC and monitor.**
+
+|Browser|Desktop|Mobile|
+|Chrome|![Home Chrome](docs/testing/browsers/chrome-home.png) ![Gallery Chrome](docs/testing/browsers/chrome-gallery.png) ![Events Chrome](docs/testing/browsers/chrome-events.png) ![About Chrome](docs/testing/browsers/chrome-about.png)||
+|Edge|![About Edge](docs/testing/browsers/edge-about.png) ![Connect Edge](docs/testing/browsers/edge-connect.png) ![Events Edge](docs/testing/browsers/edge-events.png) ![Gallery Edge](docs/testing/browsers/edge-gallery.png)||
+|Firefox|![About Firefox](docs/testing/browsers/fire-about.png) ![Connect Firefox](docs/testing/browsers/fire-connect.png) ![Events Firefox](docs/testing/browsers/fire-home.png) ![Gallery Firefox](docs/testing/browsers/fire-gallery.png)||
 
 # Resources
 ## Images
