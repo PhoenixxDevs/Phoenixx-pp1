@@ -115,6 +115,15 @@ Throughout creating this website I have ensured that I switched my screen to gre
 
 - The final feature of the home screen is an embedded Soundcloud player, for the desktop version, that can be revealed by the "listen" button. Just like the little man at the bottom this button is concurrent. The idea is that you explore Phoenixx's music as you explore the website and get to know the artist.
 
+## Events Section
+
+- The events section is a simple list of all upcoming shows, locations and times as well as a button that opens ticketmaster.
+- Each venue listed is a usable link that takes you to the appropriate venue's website.
+- Again, all links are marked by a chevron to draw attention and encourage users to click.
+
+<img src="docs/features/home-full.png" style="max-width: 650px;">
+
+- It is worth noting that instead of using headings, the navigation link becomes the heading and the rest are hidden behind a burger menu in the top right. The main title "Phoenixx" becoming the navigation link to return to the home section.
 
 
 
