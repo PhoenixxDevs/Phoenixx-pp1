@@ -1,13 +1,15 @@
 # Phoenixx Music
 
+View the web application here: [Phoenixx](https://phoenixxdevs.github.io/Phoenixx-pp1/)
+
 ---
 
 # Table of Contents
 
 - [Phoenixx Music](#phoenixx-music)
 - [Table of Contents](#table-of-contents)
-  - [Initial Discussion](#initial-discussion)
-    - [Mock Ups](#mock-ups)
+- [Initial Discussion](#initial-discussion)
+  - [Mock Ups](#mock-ups)
 - [User Experience (UX)](#user-experience-ux)
   - [Important Information to Include](#important-information-to-include)
   - [User Stories](#user-stories)
@@ -35,17 +37,22 @@
   - [Accessibility Testing](#accessibility-testing)
     - [Lighthouse Testing](#lighthouse-testing)
     - [Manual Testing](#manual-testing)
-      - [Browsers](#browsers)
+    - [Browsers](#browsers)
+    - [Bug Fixes](#bug-fixes)
+      - [Bug 1](#bug-1)
+      - [Bug 2](#bug-2)
+      - [Bug 3](#bug-3)
+      - [Known Bug](#known-bug)
 - [Resources](#resources)
   - [Utilities](#utilities)
 
 ---
 
-## Initial Discussion
+# Initial Discussion
 Phoenixx Music is an artist website, created to be a showcase of the artist's work and style. In addition to looking exciting it aims to provide information on who the artist is, upcoming shows and how to get in touch.
 
 After recording his first EP and performing at multiple events, the artist needs a place to send fans and promoters which will serve as a hub to direct visitors to what they are searching for.
-### Mock Ups
+## Mock Ups
 ![Phoenixx Mock Ups](docs/phoenixx-mockups.webp)
 
 ---
@@ -86,7 +93,6 @@ After recording his first EP and performing at multiple events, the artist needs
 |--|--|
 |15.|As a visiting fan I want to be able to find social media links easily.<br>I know I am done when the site subtly directs visitors towards social media links.|
 |16.|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section.|
-|--|--|
 
 ---
 # Design
@@ -240,7 +246,7 @@ User Stories: 2, 3, 5, 7, 13, 16
 |10.|**_Complete_**|As a first time visitor I want to I want to know where to listen to the artist's music.<br>I know I am done when the website showcases external links to Spotify and YouTube.<br> Evidence: There are [links](#home-section) (item 8) to Spotify and YouTube on most pages.|
 |11.|**_Complete_**|As a first time visitor I want to find links to social media so I can follow the artist. <br> I know I am done when the website directs visitors to social media links.<br> Evidence: There are [links](#home-section) (item 8) to social media like Facebook and Instagram|<br>
 |12.|**_Complete_**|As a professional visitor I want current information about the artist's upcoming shows and new releases.<br>I know I am done when the website has a section that showcases upcoming events. <br> Evidence: There is a fully functioning [Events](#events-section) that leads to venue and ticket websites.|
-|13.|**_Complete_**|As a professional visitor I want to find out more about the artist and what music he makes.<br>I know I am done when the website provides links to music and socials as well as an "About" page.|
+|13.|**_Complete_**|As a professional visitor I want to find out more about the artist and what music he makes.<br>I know I am done when the website provides links to music and socials as well as an "About" page.<br> Evidence: The [About Section](#about-page) contains information about the artist that is relevant to a professional visitor of the site.|
 |14.|**_Complete_**|As a professional visitor I want to easily be able to contact the artist about potential shows or collaborations.<br>I know I am done when the website provides a form for sending messages to the client/relevant channels.<br> The [Connect section](#connect-section) allows anybody to make an inquiry.|<br>
 |15.|**_Complete_**|As a visiting fan I want to be able to find social media links easily.<br>I know I am done when the site subtly directs visitors towards social media links.<br> Evidence: [Home Section](#home-section) (item 8) is the perfect example of drawing attention to links.|
 |16.|**_Complete_**|As a visiting fan I want to know more about the artist and find upcoming or recent events or releases.<br>I know I am done when the website has a functioning events section. <br>Evidence: The artist has a functioning [Events](#events-section) page that displays all of the relevant information.| <br>
@@ -275,18 +281,95 @@ Throughout creating this website I have ensured that I switched my screen to gre
   <img src="docs/testing/bw-gallery.png" style="max-width: 400px;">
 </div>
 
-- I have tested the web application on different browsers and different devices ensuring that funcionality is not hindered.
+- I have tested the web application on different browsers and different devices ensuring that functionality is not hindered.
 - All links direct the user to the intended target.
 - Fonts are clear and readable and colours contrast in a way which is manageable and easy to differentiate.
 
-#### Browsers
+### Browsers
 
-**Note - The high contrast in some screenshots is due to hardware incompatibilities between my PC and monitor.**
+**_Note - The high contrast in some screenshots is due to hardware incompatibilities between my PC and monitor._**
 
 |Browser|Desktop|Mobile|
-|Chrome|![Home Chrome](docs/testing/browsers/chrome-home.png) ![Gallery Chrome](docs/testing/browsers/chrome-gallery.png) ![Events Chrome](docs/testing/browsers/chrome-events.png) ![About Chrome](docs/testing/browsers/chrome-about.png)||
-|Edge|![About Edge](docs/testing/browsers/edge-about.png) ![Connect Edge](docs/testing/browsers/edge-connect.png) ![Events Edge](docs/testing/browsers/edge-events.png) ![Gallery Edge](docs/testing/browsers/edge-gallery.png)||
-|Firefox|![About Firefox](docs/testing/browsers/fire-about.png) ![Connect Firefox](docs/testing/browsers/fire-connect.png) ![Events Firefox](docs/testing/browsers/fire-home.png) ![Gallery Firefox](docs/testing/browsers/fire-gallery.png)||
+|--|--|--|
+|Chrome|![Home Chrome](docs/testing/browsers/chrome-home.png) ![Gallery Chrome](docs/testing/browsers/chrome-gallery.png) ![Events Chrome](docs/testing/browsers/chrome-events.png) ![About Chrome](docs/testing/browsers/chrome-about.png)|![Home Chrome](docs/testing/browsers/mobile/chrome-home.png) ![Gallery Chrome](docs/testing/browsers/mobile/chrome-gallery.png) ![Events Chrome](docs/testing/browsers/mobile/chrome-events.png) ![Connect](docs/testing/browsers/mobile/chrome-connect.png)|
+|--|--|--|
+|Edge|![About Edge](docs/testing/browsers/edge-about.png) ![Connect Edge](docs/testing/browsers/edge-connect.png) ![Events Edge](docs/testing/browsers/edge-events.png) ![Gallery Edge](docs/testing/browsers/edge-gallery.png)|![About Edge](docs/testing/browsers/mobile/edge-about.png) ![Connect Edge](docs/testing/browsers/mobile/edge-connect.png) ![Events Edge](docs/testing/browsers/mobile/edge-events.png) ![Home Edge](docs/testing/browsers/mobile/edge-home.png)|
+|--|--|--|
+|Firefox|![About Firefox](docs/testing/browsers/fire-about.png) ![Connect Firefox](docs/testing/browsers/fire-connect.png) ![Events Firefox](docs/testing/browsers/fire-home.png) ![Gallery Firefox](docs/testing/browsers/fire-gallery.png)|![About Firefox](docs/testing/browsers/mobile/fire-about.png) ![Connect Firefox](docs/testing/browsers/mobile/fire-connect.png) ![Events Firefox](docs/testing/browsers/mobile/fire-events.png) ![Gallery Firefox](docs/testing/browsers/mobile/fire-gallery.png)|
+
+### Bug Fixes
+
+#### Bug 1
+
+The code inside of [app.js](assets/js/app.js) controls the canvas which is the background of the page. During development an issue occured on the resize event. As there is no scrolling and this is a one page application, the canvas sets the size of the page. However setting the size with:
+``` 
+// OLD CODE
+function resize(){
+  WIDTH = window.innerWidth;
+  HEIGHT = window.innerHeight;
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+} 
+```
+would produce a result similar to this:
+<img src="docs/testing/broken-dimensions.png" style="max-width: 400px;">
+After observing that the dimensions of the canvas and the browser were not configuring properly
+<div>
+<img src="docs/testing/canvas-att.png">
+<img src="docs/testing/actual-dim.png">
+</div>
+and console logging window.innerWidth I deduced that it was being miscalculated and I would have to set the WIDTH variable another way.
+
+This led me to the following:
+```
+// FIXED CODE
+function resize() {
+  WIDTH = document.querySelector("html").clientWidth;
+  HEIGHT = document.querySelector("html").clientHeight;
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+}
+```
+
+#### Bug 2
+
+When entering a section of the website and attempting to use the burger menu for navigation the dropdown that opened would sometimes appear underneath the active section, this would result in the user being unable to use parts of the menu.
+The fix for this was quite simple using the z-index:
+```
+#nav-container {
+    z-index: 151;
+}
+```
+
+#### Bug 3
+
+Upon implementing CSS's scroll snapping feature to the [Gallery Section](#gallery-section), the javascript that I adapted from another source ([link in [Utilities](#utilities)]) misaligned in a way which stopped scrolling on touchpads unless the delta value was high enough.
+To combat this I had to use an if-else statement to set the scroll snapping to none whilst scrolling above a certain threshold and then back to "mandatory x" when the values return. See the below code:
+
+```
+imgScrollContainer.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault(); // stop scrolling in another direction
+    if(e.deltaY > 4 || e.deltaY < -4 || e.deltaX > 4 || e.deltaX < -4){
+      imgScrollContainer.style.scrollSnapType = "none";
+      imgScrollContainer.scrollLeft += e.deltaY;
+    }
+    else {e.deltaX = 0; e.deltaY = 0; imgScrollContainer.style.scrollSnapType = "x mandatory";}
+  },
+  { passive: false }
+);
+```
+
+#### Known Bug
+
+On the mobile version of [Brave Browser](https://brave.com/), the gradient text for the main title can appear dull and/or blurred as shown below:
+![Dull Gradient](docs/testing/bug-gradient.png)
+A potential fix for this is to use an SVG gradient instead of background clipping method as stated shown in [this](https://www.geeksforgeeks.org/how-to-create-linear-gradient-text-by-using-html/) article.
+
+---
+
+
 
 # Resources
 ## Images
