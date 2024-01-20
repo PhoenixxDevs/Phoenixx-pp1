@@ -106,7 +106,7 @@ Throughout creating this website I have ensured that I switched my screen to gre
 <img src="docs/features/nav-glow.png" style="max-width: 650px;">
 
 - The navigation has a translucent purple background with purple writing over the top and so I decided to use a yellow text-shadow to highlight and help make the contrast more obvious.
-- Each item in the navigation bar glows yellow when hovered over.
+- Each item in the navigation bar is big enough to draw attention and glow yellow when hovered over.
 
 <div>
 <img src="docs/features/sc-player-in.png" style="max-width: 300px;">
@@ -121,11 +121,20 @@ Throughout creating this website I have ensured that I switched my screen to gre
 - Each venue listed is a usable link that takes you to the appropriate venue's website.
 - Again, all links are marked by a chevron to draw attention and encourage users to click.
 
-<img src="docs/features/home-full.png" style="max-width: 650px;">
+<img src="docs/features/events-full.png" style="max-width: 650px;">
 
 - It is worth noting that instead of using headings, the navigation link becomes the heading and the rest are hidden behind a burger menu in the top right. The main title "Phoenixx" becoming the navigation link to return to the home section.
 
+<div>
+<img src="docs/features/burger-closed.png" style="max-width: 300px;">
+<img src="docs/features/burger-open.png" style="max-width: 300px;">
+</div>
 
+- The above pictures show the interactivity of the burger menu when clicked.
+
+## About Section
+
+- 
 
 # Resources
 ## Images
