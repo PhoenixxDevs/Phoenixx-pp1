@@ -1,6 +1,6 @@
 # Phoenixx Music
 
-View the web application here: [Phoenixx](https://phoenixxdevs.github.io/Phoenixx-pp1/)
+View the web application here: [Phoenixx - One Page Web Application](https://phoenixxdevs.github.io/Phoenixx-pp1/)
 
 ---
 
@@ -43,6 +43,12 @@ View the web application here: [Phoenixx](https://phoenixxdevs.github.io/Phoenix
       - [Bug 2](#bug-2)
       - [Bug 3](#bug-3)
       - [Known Bug](#known-bug)
+- [Deployment](#deployment)
+  - [Cloning and Forking](#cloning-and-forking)
+    - [Cloning](#cloning)
+    - [Forking](#forking)
+  - [Local Deployment](#local-deployment)
+  - [Remote Deployment](#remote-deployment)
 - [Resources](#resources)
   - [Utilities](#utilities)
 
@@ -369,7 +375,54 @@ A potential fix for this is to use an SVG gradient instead of background clippin
 
 ---
 
+# Deployment
 
+## Cloning and Forking
+
+### Cloning
+
+1. Click [here](https://github.com/PhoenixxDevs/Phoenixx-pp1) or go to [github.com](https://github.com/) and find the "Phoenixx pp1" repository on the "PhoenixxDevs" profile.
+2. Above the file explorer click the tab that states 'code' (usually a bright green button).
+3. Copy the URL for the repository.
+4. Open your Terminal programme and navigate the directory to the desired location.
+5. Type "git clone" (without the quotation marks), and paste in the URL.
+6. Press Enter to clone.
+
+### Forking
+
+1. Click [here](https://github.com/PhoenixxDevs/Phoenixx-pp1) or go to [github.com](https://github.com/) and find the "Phoenixx pp1" repository on the "PhoenixxDevs" profile.
+2. In the top-right corner of the page, click Fork (a grey button with a symbol somewhat resembling a "Y").
+3. Name the forked repository something else or leave it as the default.
+4. Add a description.
+5. Click "Create Fork" to finish.
+
+## Local Deployment
+
+1. Inside VSCode open integrated terminal in "Terminal" -> "New Terminal" or press "ctrl + `" on mac.
+2. Input the following command:
+   ```
+   git clone https://github.com/PhoenixxDevs/Phoenixx-pp1
+   ```
+3. Navigate terminal to the directory containing the repository:
+   ```
+   cd Phoenixx-pp1
+   ```
+4. Open the repository inside of VSCode:
+   ```
+   code .
+   ```
+
+## Remote Deployment
+
+To deploy on Github Pages follow these steps:
+
+1. Go to your repository on Github.
+2. Find "Settings" towards the top of the screen.
+3. Under the "Code and Automation" tab on the right hand side, click "Pages".
+4. Under "Branch" select "master" and "/root".
+5. Once saved the webpage will be deployed.
+   
+Live link to the site can be found at the [top](#phoenixx-music) of the document.
 
 # Resources
 ## Images
@@ -388,6 +441,7 @@ Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitt
 |Breakpoint Locations|https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/|
 |Horizontal Scroll in JS|https://dev.to/samthor/divert-vertical-scroll-to-the-side-3id0#:~:text=Vertical%20To%20Horizontal&text=We%20can%20actually%20redirect%20catch,we%20prevent%20real%20horizontal%20scrolling.|
 |Lazy Loading Images|https://web.dev/articles/lazy-loading-images|
+|Clone Repository Locally|https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/with-visual-studio-code/clone-github-repository?tabs=integrated-terminal#clone-repository|
 |[About Section](#about) Container Horizontal Scrolling|https://alvarotrigo.com/blog/scroll-horizontally-with-mouse-wheel-vanilla-java/|
 |[About Section](#about) Container Scroll Snapping|https://alvarotrigo.com/blog/css-snap-scroll-horizontally/|
 |[Home Section](#home) Responsive CSS Arrow|https://codepen.io/pamcy/pen/wQbEao?editors=1100|
