@@ -50,7 +50,6 @@ View the web application here: [Phoenixx - One Page Web Application](https://pho
   - [Local Deployment](#local-deployment)
   - [Remote Deployment](#remote-deployment)
 - [Resources](#resources)
-  - [Utilities](#utilities)
 
 ---
 
@@ -426,12 +425,9 @@ Live link to the site can be found at the [top](#phoenixx-music) of the document
 
 # Resources
 
-## Images
-Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
-
-## Utilities
 |Used For|Link|
 |--|--|
+|Image of man in bottom left|https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html|
 |Markdown Editor|https://stackedit.io/app#|
 |VSCode Markdown|https://github.com/yzhang-gh/vscode-markdown|
 |Colour Palette Design|https://color.adobe.com/My-Color-Theme-color-theme-889ac981-1580-4518-8afb-66671f0c0db8|
