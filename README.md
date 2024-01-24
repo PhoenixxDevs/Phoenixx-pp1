@@ -371,7 +371,7 @@ imgScrollContainer.addEventListener(
 
 On the mobile version of [Brave Browser](https://brave.com/), the gradient text for the main title can appear dull and/or blurred as shown below:
 ![Dull Gradient](docs/testing/bug-gradient.png)
-A potential fix for this is to use an SVG gradient instead of background clipping method as stated shown in [this](https://www.geeksforgeeks.org/how-to-create-linear-gradient-text-by-using-html/) article.
+A potential fix for this is to use an SVG gradient instead of the background clipping method as shown in [this](https://www.geeksforgeeks.org/how-to-create-linear-gradient-text-by-using-html/) article.
 
 ---
 
@@ -425,8 +425,11 @@ To deploy on Github Pages follow these steps:
 Live link to the site can be found at the [top](#phoenixx-music) of the document.
 
 # Resources
+
 ## Images
+
 Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
+
 ## Utilities
 |Used For|Link|
 |--|--|
