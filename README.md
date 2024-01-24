@@ -427,7 +427,6 @@ Live link to the site can be found at the [top](#phoenixx-music) of the document
 # Resources
 
 ## Images
-
 Image of man in bottom left - https://pngtree.com/freepng/cartoon-style-man-sitting-on-his-back_4288845.html
 
 ## Utilities
