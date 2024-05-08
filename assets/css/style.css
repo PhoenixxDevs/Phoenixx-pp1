@@ -48,7 +48,6 @@ section {
 .title-main h1 {
   width: 300px;
   margin: 4vh auto;
-  /* margin-bottom: 2vh; */
   text-align: center;
   top: 12%;
   font-size: 80px;
@@ -99,7 +98,6 @@ section {
 .nav-container {
   text-align: center;
   font-family: "Glory", sans-serif;
-  /* font-family: "Inter Tight", sans-serif; */
   font-weight: 600;
   font-size: 35px;
   letter-spacing: 1.5px;
@@ -135,7 +133,6 @@ nav li {
     -3px 0 6px rgba(234, 226, 158, 0.569), 0 3px 6px rgba(234, 226, 158, 0.569),
     0 -3px 6px rgba(234, 226, 158, 0.569);
   transition: all 0.3s;
-  /* transform: scale(1.1);  */
   user-select: none;
 }
 .nav-element:active {
