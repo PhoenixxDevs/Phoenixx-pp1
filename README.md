@@ -6,9 +6,55 @@ View the web application here: [Phoenixx - One Page Web Application](https://pho
 
 # Table of Contents
 
-- [Phoenixx Music](#phoenixx-music)
+- [Phoenixx Music](#phoenixx-music)- [Phoenixx Music](#phoenixx-music)
 - [Table of Contents](#table-of-contents)
 - [Initial Discussion](#initial-discussion)
+  - [Rationale](#rationale)
+  - [Mock Ups](#mock-ups)
+- [User Experience (UX)](#user-experience-ux)
+  - [Important Information to Include](#important-information-to-include)
+  - [User Stories](#user-stories)
+    - [Client Goals](#client-goals)
+    - [First Time Visitor Goals](#first-time-visitor-goals)
+    - [Professional Visitor Goals](#professional-visitor-goals)
+    - [Fan Visitor Goals](#fan-visitor-goals)
+- [Design](#design)
+  - [Wireframes](#wireframes)
+    - [Home](#home)
+    - [Events](#events)
+    - [Gallery](#gallery)
+    - [About](#about)
+    - [Connect](#connect)
+  - [Colour Palette](#colour-palette)
+- [Features](#features)
+  - [Home Section](#home-section)
+  - [Events Section](#events-section)
+  - [About Section](#about-section)
+  - [Connect Section](#connect-section)
+  - [Gallery Section](#gallery-section)
+- [Testing](#testing)
+  - [Validators](#validators)
+  - [Testing User Stories](#testing-user-stories)
+  - [Accessibility Testing](#accessibility-testing)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [Manual Testing](#manual-testing)
+    - [Browsers](#browsers)
+    - [Bug Fixes](#bug-fixes)
+      - [Bug 1](#bug-1)
+      - [Bug 2](#bug-2)
+      - [Bug 3](#bug-3)
+      - [Known Bug](#known-bug)
+- [Deployment](#deployment)
+  - [Cloning and Forking](#cloning-and-forking)
+    - [Cloning](#cloning)
+    - [Forking](#forking)
+  - [Local Deployment](#local-deployment)
+  - [Remote Deployment](#remote-deployment)
+- [Resources](#resources)
+
+- [Table of Contents](#table-of-contents)
+- [Initial Discussion](#initial-discussion)
+  - [Rationale](#rationale)
   - [Mock Ups](#mock-ups)
 - [User Experience (UX)](#user-experience-ux)
   - [Important Information to Include](#important-information-to-include)
@@ -57,6 +103,40 @@ View the web application here: [Phoenixx - One Page Web Application](https://pho
 Phoenixx Music is an artist website, created to be a showcase of the artist's work and style. In addition to looking exciting it aims to provide information on who the artist is, upcoming shows and how to get in touch.
 
 After recording his first EP and performing at multiple events, the artist needs a place to send fans and promoters which will serve as a hub to direct visitors to what they are searching for.
+
+## Rationale
+Introduction
+
+1. Phoenixx Music is an artist website, created to be a showcase of the artist's work and style.
+
+Motivation & Inspiration
+
+2. After recording his first EP and performing at multiple events, the artist needs a place to send fans and promoters which will serve as a hub to direct visitors to what they are searching for.
+   
+Relevant Background Information
+
+3. After recording his first EP and performing at multiple events, the artist needs a place to send fans and promoters.
+
+Problems, Pains & Ineffieciency to Fix
+
+4. The artist needs a place to send fans and promoters which will serve as a hub to direct visitors to what they are searching for.
+
+Proposed Solutions.
+
+5. See [Important Information to Include](#important-information-to-include) & [Features](#features).
+   
+Benefits Over Current Alternatives
+
+6. Alternatives are limited to social media and word of mouth. This will increase both whilst acting serving as a hub to direct visitors to what they are searching for.
+
+Scope and Constraints
+
+7. The project must look similar to wireframes and use vanilla javascript to ensure ease of scalability.
+
+Summary 
+
+8. See [Initial Discussion](#initial-discussion) paragraph one and two.
+
 ## Mock Ups
 ![Phoenixx Mock Ups](docs/phoenixx-mockups.webp)
 
