@@ -1030,7 +1030,7 @@ footer {
     width: 100px;
     height: 100px;
     z-index: 3000000;
-    background-image: url('../img/nav-pointer.png');
+    background-image: url('/assets/img/nav-pointer.png');
     background-size: 100%;
     background-position: center;
   }
