@@ -127,6 +127,7 @@ section {
   user-select: none;
 }
 .nav::before {
+  content: "";
   opacity: 1;
   display: block;
   position: absolute;
