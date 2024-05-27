@@ -105,9 +105,17 @@ section {
   line-height: 40px;
   user-select: none;
 }
-.nav {
+.borderFlash {
   display: inline-block;
-  padding: 15px 5px;
+  border-radius: 8px;
+  animation: borderFlash ease 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+.nav {
+  position: relative;
+  display: inline-block;
+  padding: 15px 10px;
   list-style-type: none;
   border-radius: 8px;
   background-color: rgba(97, 75, 113, 0.212);
@@ -117,6 +125,22 @@ section {
     0 -2px 2px rgba(234, 226, 158, 0.569);
   box-shadow: 0 0 17px rgba(97, 75, 113, 0.569);
   user-select: none;
+}
+.nav::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+  z-index: 3000000;
+  background-image: url('../img/nav-pointer.png');
+  background-size: 100%;
+  background-position: center;
+}
+.nav.active::before {
+  background-image: none;
 }
 nav li {
   display: inline-block;
@@ -752,6 +776,17 @@ footer {
     opacity: 1;
   }
 }
+@keyframes borderFlash {
+  0% {
+      border: 4px solid rgba(255, 255, 135, 0);
+  }  
+  50% {
+      border: 4px solid rgba(255, 255, 135, 1);
+  }  
+  100% {
+      border: 4px solid rgba(255, 255, 135, 0);
+  }  
+}
 
 /************************* MEDIA QUERIES *************************/
 
@@ -897,6 +932,7 @@ footer {
       margin-top: 5px;
       max-width: 150px;
     }
+
   }
 }
 
@@ -984,6 +1020,19 @@ footer {
     margin-right: 21px;
     width: 136px;
     line-height: 1.6;
+  }
+  .nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -100px;
+    top: 40px;
+    width: 100px;
+    height: 100px;
+    z-index: 3000000;
+    background-image: url('../img/nav-pointer.png');
+    background-size: 100%;
+    background-position: center;
   }
   .container-ep-art {
     margin-top: 5%;
